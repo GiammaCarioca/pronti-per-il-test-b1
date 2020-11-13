@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <title>Esercizio 3</title>
+    <link rel="stylesheet" href="/output.css" />
+  </head>
+
+  <body>
+    <form action="" id="esercizio03" autocomplete="off">
+      <h1>
+        3. Inserisci i verbi tra parentesi all'imperfetto o al passato prossimo.
+      </h1>
+      <ol>
+        <li>
+          <p>
+            Quando
+            <label
+              >(io) (essere) <input type="text" name="answer01" id="answer01"
+            /></label>
+            piccolo,
+            <label
+              >(andare) <input type="text" name="answer02" id="answer02"
+            /></label>
+            sempre in vacanza al mare: solo un anno io e la mia famiglia
+            <label
+              >(andare) <input type="text" name="answer03" id="answer03"
+            /></label>
+            in montagna.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Mio padre
+            <label
+              >(essere) <input type="text" name="answer04" id="answer04"
+            /></label>
+            alto, magro e
+            <label
+              >(avere) <input type="text" name="answer05" id="answer05"
+            /></label>
+            dei bellissimi baffi.
+            <label
+              >(avere) <input type="text" name="answer06" id="answer06"
+            /></label>
+            un bel carattere, solo una volta
+            <label
+              >(arrabbiarsi) <input type="text" name="answer07" id="answer07"
+            /></label>
+            molto!
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Da giovane mia sorella
+            <label
+              >(correre) <input type="text" name="answer08" id="answer08"
+            /></label>
+            tutti i giorni, una volta
+            <label
+              >(cadere) <input type="text" name="answer09" id="answer09"
+            /></label>
+            e
+            <label
+              >(prendere) <input type="text" name="answer10" id="answer10"
+            /></label>
+            una distorsione alla caviglia:
+            <label
+              >(dovere) <input type="text" name="answer11" id="answer11"
+            /></label>
+            portare le stampelle per 15 giorni...
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Quando
+            <label
+              >(io) (avere) <input type="text" name="answer12" id="answer12"
+            /></label>
+            18 anni,
+            <label
+              >(ricevere) <input type="text" name="answer13" id="answer13"
+            /></label>
+            il mio primo cellulare:
+            <label
+              >(essere) <input type="text" name="answer14" id="answer14"
+            /></label>
+            emozionatissima! Ricordo che
+            <label
+              >(volere) <input type="text" name="answer15" id="answer15"
+            /></label>
+            iniziare a usarlo subito, ma non
+            <label
+              >(conoscere) <input type="text" name="answer16" id="answer16"
+            /></label>
+            altre persone che ne avessero uno.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Quanti anni
+            <label
+              >(avere) <input type="text" name="answer17" id="answer17"
+            /></label>
+            tu e Giulio quando
+            <label
+              >(sposarsi)
+              <input type="text" name="answer18" id="answer18" /></label
+            >?
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Nel mio Paese
+            <label
+              >(io) (studiare) <input type="text" name="answer19" id="answer19"
+            /></label>
+            architettura per 5 anni e nel 2019
+            <label
+              >(iniziare) <input type="text" name="answer20" id="answer20"
+            /></label>
+            a lavorare in uno studio privato.
+          </p>
+        </li>
+      </ol>
+
+      <button type="submit">Controlla le tue risposte</button>
+    </form>
+
+    <a href="./prova01es02.html">Indietro</a>
+    <a href="./index.html">Pagina iniziale</a>
+    <a href="./prova01es05.html">Avanti</a>
+
+    <script>
+      const solutions = [
+        ["ero", "andavo", "siamo andati"],
+        ["era", "aveva", "aveva", "si è arrabbiato"],
+        ["correva", "è caduta", "ha preso", "ha dovuto"],
+        ["avevo", "ho ricevuto", "ero", "volevo", "conoscevo"],
+        ["avevate", "vi siete sposati"],
+        ["ho studiato", "ho iniziato"],
+      ].flat();
+
+      const esercizio03 = document.getElementById("esercizio03");
+
+      esercizio03.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const fields = Array.from(
+          esercizio03.querySelectorAll("input[type='text']")
+        );
+        const answers = fields.map((field) => field.value);
+
+        const normalizeAnswer = (answer) => {
+          return answer.trim().toLowerCase();
+        };
+
+        const checkAnswer = (answer, idx) => {
+          if (answer === "" || answer === "Scrivi la tua risposta") {
+            fields[idx].value = "scrivi la tua risposta";
+            return;
+          }
+
+          const rawAnswer = normalizeAnswer(answer);
+
+          if (rawAnswer === solutions[idx]) {
+            fields[idx].style.border = "3px solid green";
+            console.log("👍");
+          } else {
+            fields[idx].style.border = "3px solid red";
+            console.log("👎");
+          }
+        };
+
+        answers.forEach((answer, idx) => checkAnswer(answer, idx));
+      });
+    </script>
+  </body>
+</html>
