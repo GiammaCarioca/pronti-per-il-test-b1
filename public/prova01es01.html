@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
     <title>Esercizio 1</title>
-    <link rel="stylesheet" href="/output.css" />
+    <link rel="stylesheet" href="/public/output.css" />
   </head>
 
   <body class="text-gray-800 bg-gray-100">
-    <div class="p-6 md:p-20">
+    <div class="container p-6 mx-auto lg:w-2/3 md:p-20">
       <h1 class="text-xl font-bold md:text-3xl">
         1. Leggi il testo e rispondi alla domanda.
       </h1>
       <h2
-        class="px-4 py-3 my-2 text-lg font-bold tracking-wide text-blue-700 bg-blue-100 shadow-lg"
+        class="px-4 py-3 my-6 text-lg font-bold tracking-wide text-blue-700 bg-blue-100 shadow-lg"
       >
         Gli adolescenti sono i più attenti a riciclo e ambiente.
       </h2>
@@ -37,42 +37,70 @@
       </p>
 
       <form class="py-6" action="#" id="esercizio01" autocomplete="off">
-        <h3 class="pb-3">Secondo la ricerca</h3>
+        <h3 class="pb-3 font-bold text-l">Secondo la ricerca</h3>
         <ol>
-          <span data-risp="">
-            <li>
+          <span class="space-y-1" data-risp="">
+            <li class="p-2">
               <label for="1a">
                 A. gli adolescenti non parlano di ambiente in famiglia.
               </label>
-              <input type="radio" name="answer" value="a" id="1a" />
+              <input
+                class="w-6 h-6 form-checkbox"
+                type="radio"
+                name="answer"
+                value="a"
+                id="1a"
+              />
             </li>
-            <li>
+            <li class="p-2">
               <label for="1b">
                 B. il 54% degli adolescenti è preoccupato per il futuro del
                 pianeta.
               </label>
-              <input type="radio" name="answer" value="b" id="1b" />
+              <input
+                class="w-6 h-6 form-checkbox"
+                type="radio"
+                name="answer"
+                value="b"
+                id="1b"
+              />
             </li>
-            <li>
+            <li class="p-2">
               <label for="1c">
                 C. la maggior parte degli adolescenti ha ricevuto un'educazione
                 ambientale in famiglia.
               </label>
-              <input type="radio" name="answer" value="c" id="1c" />
+              <input
+                class="w-6 h-6 form-checkbox"
+                type="radio"
+                name="answer"
+                value="c"
+                id="1c"
+              />
             </li>
           </span>
         </ol>
         <button
-          class="px-4 py-2 mt-3 font-bold text-blue-100 bg-blue-700 rounded shadow-lg"
+          class="px-4 py-2 my-8 font-bold text-blue-700 bg-transparent border-2 border-blue-700 border-solid rounded shadow-lg hover:text-blue-100 hover:bg-blue-700"
           type="submit"
         >
           Controlla la tua risposta
         </button>
       </form>
 
-      <a class="px-4 py-2 text-blue-700" href="./index.html">Indietro</a>
-      <a class="px-4 py-2 text-blue-700" href="./index.html">Pagina iniziale</a>
-      <a class="px-4 py-2 text-blue-700" href="./prova01es02.html">Avanti</a>
+      <nav class="flex justify-between">
+        <a class="px-4 py-2 text-blue-700 hover:underline" href="./index.html"
+          >Indietro</a
+        >
+        <a class="px-4 py-2 text-blue-700 hover:underline" href="./index.html"
+          >Pagina iniziale</a
+        >
+        <a
+          class="px-4 py-2 text-blue-700 hover:underline"
+          href="./prova01es02.html"
+          >Avanti</a
+        >
+      </nav>
     </div>
 
     <script>

@@ -11,23 +11,26 @@ module.exports = {
   },
   variants: {},
   plugins: [
+    require("@tailwindcss/custom-forms"),
     function ({ e, addUtilities }) {
       const newUtilities = {
         ".error": {
-          backgroundColor: "rgba(255, 191, 190, 1)",
-          border: "1px solid rgba(255, 0, 0, 1)",
+          backgroundColor: "#f56565",
           borderRadius: "4px",
           font: "inherit",
+          color: "#f7fafc",
           lineHeight: "1.5em",
-          // padding: "0.5em 3.5em 0.5em 1em",
+          boxShadow:
+            "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
         },
         ".right": {
-          backgroundColor: "rgba(150, 255, 91, 1)",
-          border: "1px solid rgba(0, 155, 0, 1)",
+          backgroundColor: "#48bb78",
           borderRadius: "4px",
           font: "inherit",
+          color: "#f7fafc",
           lineHeight: "1.5em",
-          // padding: "0.5em 3.5em 0.5em 1em",
+          boxShadow:
+            "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
         },
         ".select": {
           backgroundColor: "rgba(200, 200, 200, 0.4)",
@@ -39,11 +42,7 @@ module.exports = {
 
           /* reset */
           margin: "0.1em",
-          // -webkit-box-sizing: "border-box",
-          // -moz-box-sizing: "border-box",
           boxSizing: "border-box",
-          // -webkit-appearance: "none",
-          // -moz-appearance: "none"
         },
       };
 
