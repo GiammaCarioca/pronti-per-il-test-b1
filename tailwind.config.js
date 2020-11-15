@@ -17,6 +17,7 @@ module.exports = {
         ".error": {
           backgroundColor: "#f56565",
           borderRadius: "4px",
+          padding: "0.5rem",
           font: "inherit",
           color: "#f7fafc",
           lineHeight: "1.5em",
@@ -26,6 +27,7 @@ module.exports = {
         ".right": {
           backgroundColor: "#48bb78",
           borderRadius: "4px",
+          padding: "0.5rem",
           font: "inherit",
           color: "#f7fafc",
           lineHeight: "1.5em",
