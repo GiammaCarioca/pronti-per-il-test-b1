@@ -5,211 +5,375 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
     <title>Esercizio 8</title>
-    <link rel="stylesheet" href="/output.css" />
+    <link rel="stylesheet" href="./output.css" />
   </head>
 
-  <body>
-    <form action="#" id="esercizio08" autocomplete="off">
-      <h1>
-        8. Ascolta i testi. Poi completa le frasi: scegli una delle tre proposte
-        di completamento.
-      </h1>
+  <body class="text-gray-800 bg-gray-100">
+    <div class="container p-6 mx-auto lg:w-2/3 md:p-20">
+      <form class="py-6" action="#" id="esercizio08" autocomplete="off">
+        <h1 class="text-xl font-bold md:text-3xl">
+          8. Ascolta i testi. Poi completa le frasi: scegli una delle tre
+          proposte di completamento.
+        </h1>
 
-      <div>
-        <p>1. L'hotel Elizabeth</p>
-        <ol>
-          <span data-risp="">
-            <li>
-              <label for="1a">è in via Puccini.</label>
-              <input type="radio" name="answer01" value="a" id="1a" />
-            </li>
-            <li>
-              <label for="1b">è a cinque fermate di autobus.</label>
-              <input type="radio" name="answer01" value="b" id="1b" />
-            </li>
-            <li>
-              <label for="1c">
-                è raggiungibile a piedi in un quarto d'ora.
-              </label>
-              <input type="radio" name="answer01" value="c" id="1c" />
-            </li>
-          </span>
-        </ol>
-      </div>
+        <div class="py-6">
+          <p class="py-1 leading-relaxed">1. L'hotel Elizabeth</p>
+          <ol>
+            <span class="space-y-4" data-risp="">
+              <li class="p-2">
+                <label for="1a">A. è in via Puccini.</label>
+                <input
+                  class="w-6 h-6 form-checkbox"
+                  type="radio"
+                  name="answer01"
+                  value="a"
+                  id="1a"
+                />
+              </li>
+              <li class="p-2">
+                <label for="1b">B. è a cinque fermate di autobus.</label>
+                <input
+                  class="w-6 h-6 form-checkbox"
+                  type="radio"
+                  name="answer01"
+                  value="b"
+                  id="1b"
+                />
+              </li>
+              <li class="p-2">
+                <label for="1c">
+                  C. è raggiungibile a piedi in un quarto d'ora.
+                </label>
+                <input
+                  class="w-6 h-6 form-checkbox"
+                  type="radio"
+                  name="answer01"
+                  value="c"
+                  id="1c"
+                />
+              </li>
+            </span>
+          </ol>
+        </div>
 
-      <div>
-        <p>2. Il biglietto giornaliero</p>
-        <ol>
-          <span data-risp="">
-            <li>
-              <label for="2a">costa quanto il biglietto singolo.</label>
-              <input type="radio" name="answer02" value="a" id="2a" />
-            </li>
-            <li>
-              <label for="2b">si deve timbrare una sola volta.</label>
-              <input type="radio" name="answer02" value="b" id="2b" />
-            </li>
-            <li>
-              <label for="2c">
-                è più conveniente se si fanno almeno tre viaggi.
-              </label>
-              <input type="radio" name="answer02" value="c" id="2c" />
-            </li>
-          </span>
-        </ol>
-      </div>
+        <div class="py-6">
+          <p class="py-1 leading-relaxed">2. Il biglietto giornaliero</p>
+          <ol>
+            <span class="space-y-4" class="space-y-4" data-risp="">
+              <li class="p-2">
+                <label for="2a">A. costa quanto il biglietto singolo.</label>
+                <input
+                  class="w-6 h-6 form-checkbox"
+                  type="radio"
+                  name="answer02"
+                  value="a"
+                  id="2a"
+                />
+              </li>
+              <li class="p-2">
+                <label for="2b">B. si deve timbrare una sola volta.</label>
+                <input
+                  class="w-6 h-6 form-checkbox"
+                  type="radio"
+                  name="answer02"
+                  value="b"
+                  id="2b"
+                />
+              </li>
+              <li class="p-2">
+                <label for="2c">
+                  C. è più conveniente se si fanno almeno tre viaggi.
+                </label>
+                <input
+                  class="w-6 h-6 form-checkbox"
+                  type="radio"
+                  name="answer02"
+                  value="c"
+                  id="2c"
+                />
+              </li>
+            </span>
+          </ol>
+        </div>
 
-      <div>
-        <p>3. Il corso di nuoto</p>
-        <ol>
-          <span data-risp="">
-            <li>
-              <label for="3a">è una volta alla settimana. </label>
-              <input type="radio" name="answer03" value="a" id="3a" />
-            </li>
-            <li>
-              <label for="3b">è in estate.</label
-              ><input type="radio" name="answer03" value="b" id="3b" />
-            </li>
-            <li>
-              <label for="3c">costa 120 euro in totale. </label>
-              <input type="radio" name="answer03" value="c" id="3c" />
-            </li>
-          </span>
-        </ol>
-      </div>
+        <div class="py-6">
+          <p class="py-1 leading-relaxed">3. Il corso di nuoto</p>
+          <ol>
+            <span class="space-y-4" data-risp="">
+              <li class="p-2">
+                <label for="3a">A. è una volta alla settimana. </label>
+                <input
+                  class="w-6 h-6 form-checkbox"
+                  type="radio"
+                  name="answer03"
+                  value="a"
+                  id="3a"
+                />
+              </li>
+              <li class="p-2">
+                <label for="3b">B. è in estate.</label
+                ><input
+                  class="w-6 h-6 form-checkbox"
+                  type="radio"
+                  name="answer03"
+                  value="b"
+                  id="3b"
+                />
+              </li>
+              <li class="p-2">
+                <label for="3c">C. costa 120 euro in totale. </label>
+                <input
+                  class="w-6 h-6 form-checkbox"
+                  type="radio"
+                  name="answer03"
+                  value="c"
+                  id="3c"
+                />
+              </li>
+            </span>
+          </ol>
+        </div>
 
-      <div>
-        <p>4. Elena</p>
-        <ol>
-          <span data-risp="">
-            <li>
-              <label for="4a">
-                non vuole andare al concerto perché non le piace la musica
-                classica.
-              </label>
-              <input type="radio" name="answer04" value="a" id="4a" />
-            </li>
-            <li>
-              <label for="4b">preferisce fare shopping.</label>
-              <input type="radio" name="answer04" value="b" id="4b" />
-            </li>
-            <li>
-              <label for="4c">deve comprare un vestito.</label>
-              <input type="radio" name="answer04" value="c" id="4c" />
-            </li>
-          </span>
-        </ol>
-      </div>
+        <div class="py-6">
+          <p class="py-1 leading-relaxed">4. Elena</p>
+          <ol>
+            <span class="space-y-4" data-risp="">
+              <li class="p-2">
+                <label for="4a">
+                  A. non vuole andare al concerto perché non le piace la musica
+                  classica.
+                </label>
+                <input
+                  class="w-6 h-6 form-checkbox"
+                  type="radio"
+                  name="answer04"
+                  value="a"
+                  id="4a"
+                />
+              </li>
+              <li class="p-2">
+                <label for="4b">B. preferisce fare shopping.</label>
+                <input
+                  class="w-6 h-6 form-checkbox"
+                  type="radio"
+                  name="answer04"
+                  value="b"
+                  id="4b"
+                />
+              </li>
+              <li class="p-2">
+                <label for="4c">C. deve comprare un vestito.</label>
+                <input
+                  class="w-6 h-6 form-checkbox"
+                  type="radio"
+                  name="answer04"
+                  value="c"
+                  id="4c"
+                />
+              </li>
+            </span>
+          </ol>
+        </div>
 
-      <div>
-        <p>5. L'annuncio dice che</p>
-        <ol>
-          <span data-risp="">
-            <li>
-              <label for="5a">
-                paghi lo stesso prezzo in qualsiasi momento della giornata.
-              </label>
-              <input type="radio" name="answer05" value="a" id="5a" />
-            </li>
-            <li>
-              <label for="5b">puoi attivare l'offerta su internet.</label>
-              <input type="radio" name="answer05" value="b" id="5b" />
-            </li>
-            <li>
-              <label for="5c">
-                paghi lo stesso prezzo per chiamare i telefoni fissi o i
-                cellulari.
-              </label>
-              <input type="radio" name="answer05" value="c" id="5c" />
-            </li>
-          </span>
-        </ol>
-      </div>
+        <div class="py-6">
+          <p class="py-1 leading-relaxed">5. L'annuncio dice che</p>
+          <ol>
+            <span class="space-y-4" data-risp="">
+              <li class="p-2">
+                <label for="5a">
+                  A. paghi lo stesso prezzo in qualsiasi momento della giornata.
+                </label>
+                <input
+                  class="w-6 h-6 form-checkbox"
+                  type="radio"
+                  name="answer05"
+                  value="a"
+                  id="5a"
+                />
+              </li>
+              <li class="p-2">
+                <label for="5b">B. puoi attivare l'offerta su internet.</label>
+                <input
+                  class="w-6 h-6 form-checkbox"
+                  type="radio"
+                  name="answer05"
+                  value="b"
+                  id="5b"
+                />
+              </li>
+              <li class="p-2">
+                <label for="5c">
+                  C. paghi lo stesso prezzo per chiamare i telefoni fissi o i
+                  cellulari.
+                </label>
+                <input
+                  class="w-6 h-6 form-checkbox"
+                  type="radio"
+                  name="answer05"
+                  value="c"
+                  id="5c"
+                />
+              </li>
+            </span>
+          </ol>
+        </div>
 
-      <div>
-        <p>6. L'avviso</p>
-        <ol>
-          <span data-risp="">
-            <li>
-              <label for="6a">
-                comunica che a causa di un guasto non ci sono treni diretti a
-                Bergamo.
-              </label>
-              <input type="radio" name="answer06" value="a" id="6a" />
-            </li>
-            <li>
-              <label for="6b">è rivolto a tutti i viaggiatori.</label>
-              <input type="radio" name="answer06" value="b" id="6b" />
-            </li>
-            <li>
-              <label for="6c">
-                comunica che c'è un treno alternativo per raggiungere la
-                stazione di Bergamo.
-              </label>
-              <input type="radio" name="answer06" value="c" id="6c" />
-            </li>
-          </span>
-        </ol>
-      </div>
+        <div class="py-6">
+          <p class="py-1 leading-relaxed">6. L'avviso</p>
+          <ol>
+            <span class="space-y-4" data-risp="">
+              <li class="p-2">
+                <label for="6a">
+                  A. comunica che a causa di un guasto non ci sono treni diretti
+                  a Bergamo.
+                </label>
+                <input
+                  class="w-6 h-6 form-checkbox"
+                  type="radio"
+                  name="answer06"
+                  value="a"
+                  id="6a"
+                />
+              </li>
+              <li class="p-2">
+                <label for="6b">B. è rivolto a tutti i viaggiatori.</label>
+                <input
+                  class="w-6 h-6 form-checkbox"
+                  type="radio"
+                  name="answer06"
+                  value="b"
+                  id="6b"
+                />
+              </li>
+              <li class="p-2">
+                <label for="6c">
+                  C. comunica che c'è un treno alternativo per raggiungere la
+                  stazione di Bergamo.
+                </label>
+                <input
+                  class="w-6 h-6 form-checkbox"
+                  type="radio"
+                  name="answer06"
+                  value="c"
+                  id="6c"
+                />
+              </li>
+            </span>
+          </ol>
+        </div>
 
-      <div>
-        <p>7. Questa notizia dice che</p>
-        <ol>
-          <span data-risp="">
-            <li>
-              <label for="7a">
-                per combattere il caldo bisogna cambiare lo stile di vita.
-              </label>
-              <input type="radio" name="answer07" value="a" id="7a" />
-            </li>
-            <li>
-              <label for="7b">
-                per combattere il caldo non bisogna uscire di casa al mattino.
-              </label>
-              <input type="radio" name="answer07" value="b" id="7b" />
-            </li>
-            <li>
-              <label for="7c">
-                per combattere il caldo bisogna mettere abiti neri.
-              </label>
-              <input type="radio" name="answer07" value="c" id="7c" />
-            </li>
-          </span>
-        </ol>
-      </div>
+        <div class="py-6">
+          <p class="py-1 leading-relaxed">7. Questa notizia dice che</p>
+          <ol>
+            <span class="space-y-4" data-risp="">
+              <li class="p-2">
+                <label for="7a">
+                  A. per combattere il caldo bisogna cambiare lo stile di vita.
+                </label>
+                <input
+                  class="w-6 h-6 form-checkbox"
+                  type="radio"
+                  name="answer07"
+                  value="a"
+                  id="7a"
+                />
+              </li>
+              <li class="p-2">
+                <label for="7b">
+                  B. per combattere il caldo non bisogna uscire di casa al
+                  mattino.
+                </label>
+                <input
+                  class="w-6 h-6 form-checkbox"
+                  type="radio"
+                  name="answer07"
+                  value="b"
+                  id="7b"
+                />
+              </li>
+              <li class="p-2">
+                <label for="7c">
+                  C. per combattere il caldo bisogna mettere abiti neri.
+                </label>
+                <input
+                  class="w-6 h-6 form-checkbox"
+                  type="radio"
+                  name="answer07"
+                  value="c"
+                  id="7c"
+                />
+              </li>
+            </span>
+          </ol>
+        </div>
 
-      <div>
-        <p>8. Gli studenti</p>
-        <ol>
-          <span data-risp="">
-            <li>
-              <label for="8a">non vogliono andare a scuola.</label>
-              <input type="radio" name="answer08" value="a" id="8a" />
-            </li>
-            <li>
-              <label for="8b">
-                hanno pulito le strade dopo la manifestazione.
-              </label>
-              <input type="radio" name="answer08" value="b" id="8b" />
-            </li>
-            <li>
-              <label for="8c">
-                hanno scioperato contro i tagli alla scuola.
-              </label>
-              <input type="radio" name="answer08" value="c" id="8c" />
-            </li>
-          </span>
-        </ol>
-      </div>
+        <div class="py-6">
+          <p class="py-1 leading-relaxed">8. Gli studenti</p>
+          <ol>
+            <span class="space-y-4" data-risp="">
+              <li class="p-2">
+                <label for="8a">A. non vogliono andare a scuola.</label>
+                <input
+                  class="w-6 h-6 form-checkbox"
+                  type="radio"
+                  name="answer08"
+                  value="a"
+                  id="8a"
+                />
+              </li>
+              <li class="p-2">
+                <label for="8b">
+                  B. hanno pulito le strade dopo la manifestazione.
+                </label>
+                <input
+                  class="w-6 h-6 form-checkbox"
+                  type="radio"
+                  name="answer08"
+                  value="b"
+                  id="8b"
+                />
+              </li>
+              <li class="p-2">
+                <label for="8c">
+                  C. hanno scioperato contro i tagli alla scuola.
+                </label>
+                <input
+                  class="w-6 h-6 form-checkbox"
+                  type="radio"
+                  name="answer08"
+                  value="c"
+                  id="8c"
+                />
+              </li>
+            </span>
+          </ol>
+        </div>
 
-      <button type="submit">Controlla le tue risposte</button>
-    </form>
+        <button
+          class="px-4 py-2 my-8 font-bold text-blue-700 bg-transparent border-2 border-blue-700 border-solid rounded shadow-lg hover:text-blue-100 hover:bg-blue-700"
+          type="submit"
+          type="submit"
+        >
+          Controlla le tue risposte
+        </button>
+      </form>
 
-    <a href="./prova01es07.html">Indietro</a>
-    <a href="./index.html">Pagina iniziale</a>
-    <a href="./prova01es09.html">Avanti</a>
-
+      <nav class="flex justify-between">
+        <a
+          class="px-4 py-2 text-blue-700 hover:underline"
+          href="./prova01es07.html"
+          >Indietro</a
+        >
+        <a class="px-4 py-2 text-blue-700 hover:underline" href="../index.html"
+          >Pagina iniziale</a
+        >
+        <a
+          class="px-4 py-2 text-blue-700 hover:underline"
+          href="./prova01es09.html"
+          >Avanti</a
+        >
+      </nav>
+    </div>
     <script>
       const solutions = ["c", "c", "b", "c", "a", "c", "a", "b"];
 
