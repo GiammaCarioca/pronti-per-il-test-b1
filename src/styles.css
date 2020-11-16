@@ -1,5 +1,28 @@
 @tailwind base;
 @tailwind components;
+
+.btn {
+  @apply px-4 py-2 my-8 font-bold text-blue-700 bg-transparent border-2 border-blue-700 border-solid rounded shadow-lg;
+}
+
+.btn:hover {
+  @apply text-blue-100 bg-blue-700;
+}
+
+.btn:focus {
+  @apply shadow-outline outline-none;
+}
+
+.btn:active {
+  @apply text-blue-100 bg-blue-800;
+}
+
+/* @screen lg {
+  .btn {
+    @apply bg-green-700;
+  }
+} */
+
 @tailwind utilities;
 
 /* {
