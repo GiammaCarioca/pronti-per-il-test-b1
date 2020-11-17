@@ -31,7 +31,7 @@ esercizio.addEventListener("submit", (e) => {
         .querySelector(`input[value="${answer}"]`)
         .parentNode.classList.add("right");
 
-      document.getElementsByTagName("button")[0].style.visibility = "hidden";
+      // document.getElementsByTagName("button")[0].style.visibility = "hidden";
     } else {
       data[idx]
         .querySelector(`input[value="${answer}"]`)
