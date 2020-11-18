@@ -315,19 +315,19 @@
         };
 
         const checkAnswer = (answer, idx) => {
-          if (answer === "" || answer === "Scrivi la tua risposta") {
-            fields[idx].value = "scrivi la tua risposta";
-            return;
-          }
+          // if (answer === "" || answer === "Scrivi la tua risposta") {
+          //   fields[idx].value = "scrivi la tua risposta";
+          //   return;
+          // }
 
           const rawAnswer = normalizeAnswer(answer);
 
           if (rawAnswer === solutions[idx]) {
             fields[idx].style.border = "1px solid green";
-            console.log("👍");
+            // console.log("👍");
           } else {
             fields[idx].style.border = "1px solid red";
-            console.log("👎");
+            // console.log("👎");
           }
         };
 
