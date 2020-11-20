@@ -7,7 +7,11 @@ module.exports = {
   },
   purge: [],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        poppins: ["Poppins"],
+      },
+    },
   },
   variants: { backgroundColor: ["checked"] },
   plugins: [

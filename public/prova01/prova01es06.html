@@ -4,22 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
-    <title>Esercizio 6</title>
+    <title>Prova 1 | Esercizio 6</title>
     <link rel="stylesheet" href="./output.css" />
   </head>
 
-  <body class="text-gray-800 bg-gray-100">
-    <div class="container p-6 mx-auto lg:w-2/3 md:p-20">
-      <h1 class="text-xl font-bold md:text-3xl">
-        6. Completa i messaggi con la parola opportuna.
-      </h1>
-      <form class="py-6" action="#" id="esercizio07" autocomplete="off">
-        <ol>
-          <li class="leading-relaxed">
-            <p>A. – Dove butto la bottiglia di plastica?</p>
-            <p>
+  <body>
+    <div class="container wrapper lg:w-2/3 md:p-20">
+      <header class="my-6">
+        <h1 class="hidden">Prova 1: Ecologia e ambiente</h1>
+        <p class="hidden" role="doc-subtitle">Grammatica</p>
+        <p
+          role="doc-subtitle"
+          aria-roledescription="consegna dell'esercizio"
+          class="instructions md:text-2xl"
+        >
+          6. Completa i messaggi con la parola opportuna.
+        </p>
+      </header>
+
+      <form action="#" id="esercizio07" autocomplete="off">
+        <div class="space-y-6">
+          <section>
+            <p class="py-1 leading-relaxed">
+              A. – Dove butto la bottiglia di plastica?
+            </p>
+            <p class="py-1 leading-relaxed">
               – Butta<input
-                class="mt-1 form-input"
+                class="gap-pronoun"
                 aria-label="fill the gap"
                 type="text"
                 name="answer01"
@@ -27,13 +38,13 @@
               />
               nel sacco giallo.
             </p>
-          </li>
-          <li class="mt-6 leading-relaxed">
-            <p>
+          </section>
+          <section>
+            <p class="py-1 leading-relaxed">
               B. Le mie figlie non hanno ancora imparato a fare la raccolta
               differenziata: ogni volta
               <input
-                class="mt-1 form-input"
+                class="gap-pronoun"
                 aria-label="fill the gap"
                 type="text"
                 name="answer02"
@@ -41,12 +52,12 @@
               />
               devo spiegare tutto di nuovo.
             </p>
-          </li>
-          <li class="mt-6 leading-relaxed">
-            <p>
+          </section>
+          <section>
+            <p class="py-1 leading-relaxed">
               C. Marco
               <input
-                class="mt-1 form-input"
+                class="gap-pronoun"
                 aria-label="fill the gap"
                 type="text"
                 name="answer03"
@@ -55,13 +66,15 @@
               ha detto di andare in discarica a portare l'olio, ma ora non
               posso!
             </p>
-          </li>
-          <li class="mt-6 leading-relaxed">
-            <p>D. – I medicinali scaduti vanno portati in farmacia!</p>
-            <p>
+          </section>
+          <section>
+            <p class="py-1 leading-relaxed">
+              D. – I medicinali scaduti vanno portati in farmacia!
+            </p>
+            <p class="py-1 leading-relaxed">
               – Non preoccuparti! Per questa volta
               <input
-                class="mt-1 form-input"
+                class="gap-pronoun"
                 aria-label="fill the gap"
                 type="text"
                 name="answer04"
@@ -69,12 +82,12 @@
               />
               penso io.
             </p>
-          </li>
-          <li class="mt-6 leading-relaxed">
-            <p>
+          </section>
+          <section>
+            <p class="py-1 leading-relaxed">
               E. Quel sacco è troppo pieno di plastica,
               <input
-                class="mt-1 form-input"
+                class="gap-pronoun"
                 aria-label="fill the gap"
                 type="text"
                 name="answer05"
@@ -82,25 +95,32 @@
               />
               hai messa troppa.
             </p>
-          </li>
-        </ol>
-        <button class="btn" type="submit">Controlla la tua risposta</button>
+          </section>
+        </div>
+
+        <div class="flex justify-center">
+          <button class="btn" type="submit">Controlla la tua risposta</button>
+        </div>
       </form>
 
-      <nav class="flex justify-between">
-        <a
-          class="px-4 py-2 text-blue-700 hover:underline"
-          href="./prova01es05.html"
-          >Indietro</a
-        >
-        <a class="px-4 py-2 text-blue-700 hover:underline" href="../index.html"
-          >Pagina iniziale</a
-        >
-        <a
-          class="px-4 py-2 text-blue-700 hover:underline"
-          href="./prova01es07.html"
-          >Avanti</a
-        >
+      <nav class="mt-6">
+        <ol class="flex justify-between">
+          <li>
+            <a class="nav-link hover:underline" href="./prova01es05.html"
+              >Indietro</a
+            >
+          </li>
+          <li>
+            <a class="nav-link hover:underline" href="../../index.html"
+              >Pagina iniziale</a
+            >
+          </li>
+          <li>
+            <a class="nav-link hover:underline" href="./prova01es07.html"
+              >Avanti</a
+            >
+          </li>
+        </ol>
       </nav>
     </div>
     <script>
