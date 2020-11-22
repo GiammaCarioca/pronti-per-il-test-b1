@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "build": "postcss src/styles.css -o public/prova01/output.css",
-    "watch": "postcss src/styles.css -o public/prova01/output.css --watch"
+    "build": "postcss src/styles.css -o public/output.css",
+    "watch": "postcss src/styles.css -o public/output.css --watch"
   },
   "keywords": [],
   "author": "",
