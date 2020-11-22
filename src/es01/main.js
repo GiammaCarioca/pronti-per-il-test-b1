@@ -10,7 +10,9 @@ console.log(filePath);
 const directoryPath = pathArray[pathArray.length - 2];
 console.log(directoryPath);
 
-const solutions = getSolutions()[`${directoryPath}`];
+const allSolutions = getSolutions()[`${directoryPath}`];
+const solutions = allSolutions[filePath][0];
+console.log(solutions);
 
 const form = `${filePath}`;
 const esercizio = document.getElementById(form);
