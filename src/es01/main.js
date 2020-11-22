@@ -2,13 +2,13 @@ import service from "../machine.js";
 import getSolutions from "../../solutions.js";
 
 const pathArray = window.location.pathname.split("/");
-// console.log(pathArray);
+console.log(pathArray);
 
-const filePath = pathArray[3].substring(0, 4);
-// console.log(filePath);
+const filePath = pathArray[pathArray.length - 1].substring(0, 4);
+console.log(filePath);
 
-const directoryPath = pathArray[2];
-// console.log(directoryPath);
+const directoryPath = pathArray[pathArray.length - 2];
+console.log(directoryPath);
 
 const solutions = getSolutions()[`${directoryPath}`];
 
