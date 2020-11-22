@@ -24,6 +24,10 @@ article {
   @apply leading-normal text-gray-100 bg-red-500 rounded shadow-lg;
 }
 
+.wrong {
+  @apply leading-normal text-gray-100 bg-red-500 rounded shadow-lg;
+}
+
 .right {
   @apply leading-normal text-gray-100 bg-green-500 rounded shadow-lg;
 }

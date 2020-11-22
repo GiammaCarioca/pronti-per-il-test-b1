@@ -1,44 +1,88 @@
+const { Machine, actions, interpret } = XState; // global variable: window.XState
+
+const correctionMachine = Machine({
+  // Initial state
+  initial: "unanswered",
+  // State definitions
+  states: {
+    unanswered: {
+      on: {
+        // state transition (shorthand)
+        // this is equivalent to { target: 'answered' }
+        // INPUT is an event
+        INPUT: {
+          target: "answered",
+        },
+      },
+    },
+    answered: {
+      on: {
+        SUBMIT: "corrected",
+      },
+    },
+    corrected: {
+      type: "final",
+    },
+  },
+});
+
+// Interpret the machine, and add a listener for whenever a transition occurs.
+const service = interpret(correctionMachine).onTransition((state) => {
+  console.log(state.value);
+
+  if (state.matches("corrected")) {
+    return document
+      .querySelectorAll("input[type=radio]")
+      .forEach((item) => item.setAttribute("disabled", true));
+  }
+});
+
+// Start the service
+service.start();
+
 const solutions = ["c"];
 
 const form = "esercizio01";
 const esercizio = document.getElementById(form);
 
-const fields = Array.from(esercizio.querySelectorAll("input[type='radio']"));
+const data = Array.from(esercizio.querySelectorAll("div[data-risp]"));
+
+const checkAnswer = (answer, idx) =>
+  answer === solutions[idx].toString() ? true : false;
+
+const addClassRight = (answer, idx) =>
+  data[idx]
+    .querySelector(`input[value="${answer}"]`)
+    .parentNode.classList.add("right");
+
+const addClassWrong = (answer, idx) =>
+  data[idx]
+    .querySelector(`input[value="${answer}"]`)
+    .parentNode.classList.add("error");
 
 esercizio.addEventListener("change", (e) => {
-  // if field is checked then pass the value to the parent
-  fields.forEach((field, idx) => {
-    field.checked
-      ? (field.parentNode.parentNode.parentNode.dataset.risp = field.value)
-      : "";
-  });
+  e.target.checked &&
+    (e.target.parentNode.parentNode.dataset.risp = e.target.value);
+
+  // Send event
+  service.send("INPUT");
 });
 
 esercizio.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const data = Array.from(esercizio.querySelectorAll("div[data-risp]"));
-
   const answers = data.map((item) => item.dataset.risp);
 
-  const checkAnswer = (answer, idx) =>
-    answer === solutions[idx].toString() ? true : false;
+  if (!answers) return;
 
-  answers.forEach((answer, idx) => {
-    if (!answer) return;
+  answers.forEach((answer, idx) =>
+    checkAnswer(answer, idx)
+      ? addClassRight(answer, idx)
+      : addClassWrong(answer, idx)
+  );
 
-    if (checkAnswer(answer, idx)) {
-      data[idx]
-        .querySelector(`input[value="${answer}"]`)
-        .parentNode.classList.add("right");
-    } else {
-      data[idx]
-        .querySelector(`input[value="${answer}"]`)
-        .parentNode.classList.add("error");
-    }
+  service.send("SUBMIT");
 
-    document
-      .querySelectorAll("input[type=radio]")
-      .forEach((item) => item.setAttribute("disabled", true));
-  });
+  // Stop the service when you are no longer using it.
+  service.stop();
 });
