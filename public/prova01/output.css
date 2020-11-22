@@ -759,6 +759,23 @@ article {
   background-color: rgba(44, 82, 130, var(--bg-opacity));
 }
 
+.disabled {
+  --text-opacity: 1;
+  color: #e2e8f0;
+  color: rgba(226, 232, 240, var(--text-opacity));
+  --border-opacity: 1;
+  border-color: #e2e8f0;
+  border-color: rgba(226, 232, 240, var(--border-opacity));
+}
+
+.disabled:hover {
+  --text-opacity: 1;
+  color: #e2e8f0;
+  color: rgba(226, 232, 240, var(--text-opacity));
+  background-color: transparent;
+  cursor: not-allowed;
+}
+
 input[type="text"] {
   width: 10rem;
   margin-top: 0.25rem;

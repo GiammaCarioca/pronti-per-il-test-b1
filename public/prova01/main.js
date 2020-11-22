@@ -30,20 +30,30 @@ const correctionMachine = Machine({
 const service = interpret(correctionMachine).onTransition((state) => {
   console.log(state.value);
 
+  if (state.matches("unanswered")) {
+    submitBtn.classList.add("disabled");
+    submitBtn.setAttribute("disabled", true);
+  }
+
+  if (state.matches("answered")) {
+    submitBtn.classList.remove("disabled");
+    submitBtn.removeAttribute("disabled");
+  }
+
   if (state.matches("corrected")) {
+    submitBtn.classList.add("disabled");
+
     return document
       .querySelectorAll("input[type=radio]")
       .forEach((item) => item.setAttribute("disabled", true));
   }
 });
 
-// Start the service
-service.start();
-
 const solutions = ["c"];
 
 const form = "esercizio01";
 const esercizio = document.getElementById(form);
+const submitBtn = document.querySelector(".btn");
 
 const data = Array.from(esercizio.querySelectorAll("div[data-risp]"));
 
@@ -86,3 +96,6 @@ esercizio.addEventListener("submit", (e) => {
   // Stop the service when you are no longer using it.
   service.stop();
 });
+
+// Start the service
+service.start();
