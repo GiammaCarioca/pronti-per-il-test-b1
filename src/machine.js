@@ -41,11 +41,19 @@ const service = interpret(correctionMachine).onTransition((state) => {
   }
 
   if (state.matches("corrected")) {
-    document.querySelector(".btn").classList.add("disabled");
+    // document.querySelector(".btn").classList.add("disabled");
 
-    return document
-      .querySelectorAll("input[type=radio]")
-      .forEach((item) => item.setAttribute("disabled", true));
+    const data = Array.from(document.querySelectorAll("div[data-risp]"));
+
+    if (!data) return;
+
+    data.forEach((item) => {
+      if (item.dataset.risp !== "") {
+        Array.from(item.querySelectorAll("input[type='radio']")).map((item) =>
+          item.setAttribute("disabled", true)
+        );
+      }
+    });
   }
 });
 export default service;

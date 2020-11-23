@@ -2,41 +2,31 @@ import service from "../machine.js";
 import getSolutions from "../../solutions.js";
 
 const pathArray = window.location.pathname.split("/");
-console.log(pathArray);
+// console.log(pathArray);
 
 const filePath = pathArray[pathArray.length - 1].substring(0, 4);
-console.log(filePath);
+// console.log(filePath);
 
 const directoryPath = pathArray[pathArray.length - 2];
-console.log(directoryPath);
+// console.log(directoryPath);
 
 const allSolutions = getSolutions()[`${directoryPath}`];
 const solutions = allSolutions[filePath];
-console.log(solutions);
+// console.log(solutions);
 
 const form = `${filePath}`;
 const esercizio = document.getElementById(form);
 
 const data = Array.from(esercizio.querySelectorAll("div[data-risp]"));
 
-const checkAnswer = (answer, idx) =>
-  answer === solutions[idx].toString() ? true : false;
+const checkAnswer = (answer, idx) => (answer === solutions[idx] ? true : false);
 
-const addClassRight = (answer, idx) =>
-  data[idx]
-    .querySelector(`input[value="${answer}"]`)
-    .parentNode.classList.add("right");
+const addClassRight = (idx) => data[idx].parentNode.classList.add("right");
 
-const addClassWrong = (answer, idx) =>
-  data[idx]
-    .querySelector(`input[value="${answer}"]`)
-    .parentNode.classList.add("error");
+const addClassWrong = (idx) => data[idx].parentNode.classList.add("error");
 
 esercizio.addEventListener("change", (e) => {
-  e.target.checked &&
-    (e.target.parentNode.parentNode.dataset.risp = e.target.value);
-
-  // Send event
+  e.target.checked && (e.target.parentNode.dataset.risp = e.target.value);
   service.send("INPUT");
 });
 
@@ -47,17 +37,16 @@ esercizio.addEventListener("submit", (e) => {
 
   if (!answers) return;
 
-  answers.forEach((answer, idx) =>
-    checkAnswer(answer, idx)
-      ? addClassRight(answer, idx)
-      : addClassWrong(answer, idx)
-  );
+  answers.forEach((answer, idx) => {
+    data[idx].parentNode.classList.remove("right");
+    data[idx].parentNode.classList.remove("error");
+
+    checkAnswer(answer, idx) ? addClassRight(idx) : addClassWrong(idx);
+  });
 
   service.send("SUBMIT");
 
-  // Stop the service when you are no longer using it.
   service.stop();
 });
 
-// Start the service
 service.start();
