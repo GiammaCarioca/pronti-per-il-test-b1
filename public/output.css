@@ -440,6 +440,7 @@ code {
  */
 
 
+video,
 audio {
   display: block;
   vertical-align: middle;
@@ -451,6 +452,12 @@ audio {
  *
  * https://github.com/mozdevs/cssremedy/issues/14
  */
+
+
+video {
+  max-width: 100%;
+  height: auto;
+}
 
 .container{
   width: 100%;
@@ -790,7 +797,7 @@ input[type="radio"] {
 }
 
 input[type="text"].gap-pronoun {
-  width: 2rem;
+  width: 4rem;
   height: 2rem;
   margin-top: 0.25rem;
   text-align: center;
@@ -1043,6 +1050,10 @@ input[type="text"].gap-pronoun {
 
   .md\:text-2xl{
     font-size: 1.5rem;
+  }
+
+  .md\:text-3xl{
+    font-size: 1.875rem;
   }
 
   .md\:p-20{
