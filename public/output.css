@@ -991,6 +991,10 @@ input[type="text"].gap-pronoun {
   color: rgba(43, 108, 176, var(--text-opacity));
 }
 
+.italic{
+  font-style: italic;
+}
+
 .hover\:underline:hover{
   text-decoration: underline;
 }
