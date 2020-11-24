@@ -1034,4 +1034,8 @@ input[type="text"].gap-pronoun {
   .lg\:w-2\/3{
     width: 66.666667%;
   }
+
+  .lg\:w-3\/4{
+    width: 75%;
+  }
 }

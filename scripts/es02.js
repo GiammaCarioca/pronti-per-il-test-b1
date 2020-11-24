@@ -2,17 +2,11 @@ import service from "./machine.js";
 import getSolutions from "../solutions.js";
 
 const pathArray = window.location.pathname.split("/");
-// console.log(pathArray);
-
 const filePath = pathArray[pathArray.length - 1].substring(0, 4);
-// console.log(filePath);
-
 const directoryPath = pathArray[pathArray.length - 2];
-// console.log(directoryPath);
 
 const allSolutions = getSolutions()[`${directoryPath}`];
 const solutions = allSolutions[filePath];
-// console.log(solutions);
 
 const form = `${filePath}`;
 const esercizio = document.getElementById(form);
