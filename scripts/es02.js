@@ -1,5 +1,5 @@
-import service from "../machine.js";
-import getSolutions from "../../solutions.js";
+import service from "./machine.js";
+import getSolutions from "../solutions.js";
 
 const pathArray = window.location.pathname.split("/");
 // console.log(pathArray);

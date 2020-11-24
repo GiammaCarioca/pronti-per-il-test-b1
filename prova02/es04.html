@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
-    <title>Prova 2 | Esercizio 3</title>
-    <link rel="stylesheet" href="../output.css" />
+    <title>Prova 2 | Esercizio 4</title>
+    <link rel="stylesheet" href="../styles/output.css" />
   </head>
 
   <body>
@@ -18,19 +18,18 @@
           aria-roledescription="consegna dell'esercizio"
           class="instructions md:text-2xl"
         >
-          3. Completa con i pronomi diretti.
+          4. Completa con i pronomi indiretti.
         </p>
       </header>
 
-      <form action="#" id="esercizio03" autocomplete="off">
+      <form action="#" id="esercizio04" autocomplete="off">
         <div class="space-y-6">
           <section>
             <p class="py-1 leading-relaxed">
-              A. — Marcello, vuoi un'aranciata?
+              A. — Che cosa regali a tua mamma per Natale?
             </p>
             <p class="py-1 leading-relaxed">
-              — No, grazie non
-
+              —
               <input
                 class="gap-pronoun"
                 aria-label="fill the gap"
@@ -38,12 +37,12 @@
                 name="answer01"
                 id="answer01"
               />
-              voglio.
+              prendo un profumo.
             </p>
           </section>
           <section>
             <p class="py-1 leading-relaxed">
-              B. Abbiamo finito le banane! Se vai al supermercato compra
+              B. Più tardi chiamo Giulio oppure
               <input
                 class="gap-pronoun"
                 aria-label="fill the gap"
@@ -51,12 +50,12 @@
                 name="answer02"
                 id="answer02"
               />
-              .
+              scrivo un messaggio.
             </p>
           </section>
           <section>
             <p class="py-1 leading-relaxed">
-              C. Siamo andati a cercare i funghi, ma non
+              C. Vorrei andare dal professore per chieder
               <input
                 class="gap-pronoun"
                 aria-label="fill the gap"
@@ -64,15 +63,13 @@
                 name="answer03"
                 id="answer03"
               />
-              abbiamo trovati.
+              un consiglio.
             </p>
           </section>
           <section>
+            <p class="py-1 leading-relaxed">D. — Mi vuoi bene?</p>
             <p class="py-1 leading-relaxed">
-              D. — Vorrei vedere quel film con Monica Bellucci.
-            </p>
-            <p class="py-1 leading-relaxed">
-              — Anche io vorrei veder
+              — Ma certo che
               <input
                 class="gap-pronoun"
                 aria-label="fill the gap"
@@ -80,13 +77,12 @@
                 name="answer04"
                 id="answer04"
               />
-              .
+              voglio bene!
             </p>
           </section>
           <section>
             <p class="py-1 leading-relaxed">
-              E. Grazie al clima tropicale, l'Ecuador è tra i Paesi del mondo
-              più ricchi di fauna e flora. Vorrei proprio visitar
+              E. Non vedo i miei nipoti da un mese e
               <input
                 class="gap-pronoun"
                 aria-label="fill the gap"
@@ -94,13 +90,13 @@
                 name="answer05"
                 id="answer05"
               />
-              .
+              mancano tanto.
             </p>
           </section>
 
           <section>
             <p class="py-1 leading-relaxed">
-              F. Mi servirebbero dei post-it e un pennarello nero:
+              F. Stasera andate al cinema?
               <input
                 class="gap-pronoun"
                 aria-label="fill the gap"
@@ -108,7 +104,8 @@
                 name="answer01"
                 id="answer01"
               />
-              posso prendere dall'armadio?
+              consiglio di guardare l'ultimo film di Céline Sciamma, è davvero
+              fantastico.
             </p>
           </section>
         </div>
@@ -121,7 +118,7 @@
       <nav class="mt-6">
         <ol class="flex justify-between">
           <li>
-            <a class="nav-link hover:underline" href="./es02.html">Indietro</a>
+            <a class="nav-link hover:underline" href="./es03.html">Indietro</a>
           </li>
           <li>
             <a class="nav-link hover:underline" href="./index.html"
@@ -129,21 +126,21 @@
             >
           </li>
           <li>
-            <a class="nav-link hover:underline" href="./es04.html">Avanti</a>
+            <a class="nav-link hover:underline" href="./es05.html">Avanti</a>
           </li>
         </ol>
       </nav>
     </div>
     <script>
-      const solutions = ["la", "le", "ne", "lo", "lo", "li"];
+      const solutions = ["le", "gli", "gli", "ti", "mi", "vi"];
 
-      const esercizio03 = document.getElementById("esercizio03");
+      const esercizio04 = document.getElementById("esercizio04");
 
-      esercizio03.addEventListener("submit", (e) => {
+      esercizio04.addEventListener("submit", (e) => {
         e.preventDefault();
 
         const fields = Array.from(
-          esercizio03.querySelectorAll("input[type='text']")
+          esercizio04.querySelectorAll("input[type='text']")
         );
         const answers = fields.map((field) => field.value);
 

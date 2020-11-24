@@ -4,45 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
-    <title>Prova 2 | Esercizio 4</title>
-    <link rel="stylesheet" href="../output.css" />
+    <title>Prova 1 | Esercizio 6</title>
+    <link rel="stylesheet" href="../styles/output.css" />
   </head>
 
   <body>
     <div class="container wrapper lg:w-2/3 md:p-20">
       <header class="my-6">
-        <h1 class="hidden">Prova 2: Scuola</h1>
+        <h1 class="hidden">Prova 1: Ecologia e ambiente</h1>
         <p class="hidden" role="doc-subtitle">Grammatica</p>
         <p
           role="doc-subtitle"
           aria-roledescription="consegna dell'esercizio"
           class="instructions md:text-2xl"
         >
-          4. Completa con i pronomi indiretti.
+          6. Completa i messaggi con la parola opportuna.
         </p>
       </header>
 
-      <form action="#" id="esercizio04" autocomplete="off">
+      <form action="#" id="esercizio07" autocomplete="off">
         <div class="space-y-6">
           <section>
             <p class="py-1 leading-relaxed">
-              A. — Che cosa regali a tua mamma per Natale?
+              <span class="font-bold text-blue-700">A.</span>
+              – Dove butto la bottiglia di plastica?
             </p>
             <p class="py-1 leading-relaxed">
-              —
-              <input
+              – Butta<input
                 class="gap-pronoun"
                 aria-label="fill the gap"
                 type="text"
                 name="answer01"
                 id="answer01"
               />
-              prendo un profumo.
+              nel sacco giallo.
             </p>
           </section>
           <section>
             <p class="py-1 leading-relaxed">
-              B. Più tardi chiamo Giulio oppure
+              <span class="font-bold text-blue-700">B.</span>
+              Le mie figlie non hanno ancora imparato a fare la raccolta
+              differenziata: ogni volta
               <input
                 class="gap-pronoun"
                 aria-label="fill the gap"
@@ -50,12 +52,13 @@
                 name="answer02"
                 id="answer02"
               />
-              scrivo un messaggio.
+              devo spiegare tutto di nuovo.
             </p>
           </section>
           <section>
             <p class="py-1 leading-relaxed">
-              C. Vorrei andare dal professore per chieder
+              <span class="font-bold text-blue-700">C.</span>
+              Marco
               <input
                 class="gap-pronoun"
                 aria-label="fill the gap"
@@ -63,13 +66,17 @@
                 name="answer03"
                 id="answer03"
               />
-              un consiglio.
+              ha detto di andare in discarica a portare l'olio, ma ora non
+              posso!
             </p>
           </section>
           <section>
-            <p class="py-1 leading-relaxed">D. — Mi vuoi bene?</p>
             <p class="py-1 leading-relaxed">
-              — Ma certo che
+              <span class="font-bold text-blue-700">D.</span>
+              – I medicinali scaduti vanno portati in farmacia!
+            </p>
+            <p class="py-1 leading-relaxed">
+              – Non preoccuparti! Per questa volta
               <input
                 class="gap-pronoun"
                 aria-label="fill the gap"
@@ -77,12 +84,13 @@
                 name="answer04"
                 id="answer04"
               />
-              voglio bene!
+              penso io.
             </p>
           </section>
           <section>
             <p class="py-1 leading-relaxed">
-              E. Non vedo i miei nipoti da un mese e
+              <span class="font-bold text-blue-700">E.</span>
+              Quel sacco è troppo pieno di plastica,
               <input
                 class="gap-pronoun"
                 aria-label="fill the gap"
@@ -90,22 +98,7 @@
                 name="answer05"
                 id="answer05"
               />
-              mancano tanto.
-            </p>
-          </section>
-
-          <section>
-            <p class="py-1 leading-relaxed">
-              F. Stasera andate al cinema?
-              <input
-                class="gap-pronoun"
-                aria-label="fill the gap"
-                type="text"
-                name="answer01"
-                id="answer01"
-              />
-              consiglio di guardare l'ultimo film di Céline Sciamma, è davvero
-              fantastico.
+              hai messa troppa.
             </p>
           </section>
         </div>
@@ -118,29 +111,29 @@
       <nav class="mt-6">
         <ol class="flex justify-between">
           <li>
-            <a class="nav-link hover:underline" href="./es03.html">Indietro</a>
+            <a class="nav-link hover:underline" href="./es05.html">Indietro</a>
           </li>
           <li>
-            <a class="nav-link hover:underline" href="./index.html"
+            <a class="nav-link hover:underline" href="../index.html"
               >Pagina iniziale</a
             >
           </li>
           <li>
-            <a class="nav-link hover:underline" href="./es05.html">Avanti</a>
+            <a class="nav-link hover:underline" href="./es07.html">Avanti</a>
           </li>
         </ol>
       </nav>
     </div>
     <script>
-      const solutions = ["le", "gli", "gli", "ti", "mi", "vi"];
+      const solutions = ["la", "gli", "mi", "ci", "ne"];
 
-      const esercizio04 = document.getElementById("esercizio04");
+      const esercizio07 = document.getElementById("esercizio07");
 
-      esercizio04.addEventListener("submit", (e) => {
+      esercizio07.addEventListener("submit", (e) => {
         e.preventDefault();
 
         const fields = Array.from(
-          esercizio04.querySelectorAll("input[type='text']")
+          esercizio07.querySelectorAll("input[type='text']")
         );
         const answers = fields.map((field) => field.value);
 

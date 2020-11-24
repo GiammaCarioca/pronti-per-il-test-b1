@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "build": "postcss src/styles.css -o public/output.css",
-    "watch": "postcss src/styles.css -o public/output.css --watch"
+    "build": "postcss styles/tailwind.css -o styles/output.css",
+    "watch": "postcss styles/tailwind.css -o styles/output.css --watch"
   },
   "keywords": [],
   "author": "",

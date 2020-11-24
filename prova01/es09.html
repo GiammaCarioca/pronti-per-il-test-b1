@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
-    <title>Prova 1 | Esercizio 8</title>
-    <link rel="stylesheet" href="../output.css" />
+    <title>Prova 1 | Esercizio 9</title>
+    <link rel="stylesheet" href="../styles/output.css" />
   </head>
 
   <body>
@@ -18,37 +18,39 @@
           aria-roledescription="consegna dell'esercizio"
           class="instructions md:text-2xl"
         >
-          8. Ascolta il testo che parla del protocollo di Kyoto poi leggi le
-          affermazioni seguenti. Non tutte sono presenti nel testo. Indica se
-          l'affermazione è presente (SÌ) o se NON è presente (NO).
+          9. Ascolta il testo poi leggi le affermazioni seguenti. Non tutte sono
+          presenti nel testo. Indica se l'affermazione è presente (SÌ) o se NON
+          è presente (NO).
           <span
             class="block px-4 py-3 my-6 text-lg font-bold tracking-wide text-blue-700 bg-blue-100 shadow-lg"
-            >Le affermazioni ripetono le stesse parole del testo.</span
+            >Le affermazioni riportano il contenuto del testo senza ripetere
+            necessariamente le parole.</span
           >
         </p>
       </header>
 
       <figure class="my-6">
         <!-- <figcaption>Clicca per ascoltare la traccia:</figcaption> -->
-        <audio controls src="../media/Audio_02.mp3">
+        <audio controls src="../assets/media/Audio_03.mp3">
           Your browser does not support the
           <code>audio</code> element.
         </audio>
       </figure>
 
-      <form action="" id="esercizio09" autocomplete="off">
+      <form action="#" id="esercizio10" autocomplete="off">
         <div class="space-y-4">
           <fieldset class="flex justify-between">
             <div>
               <legend class="flex-initial p-2">
-                A. prende il nome da una realtà giapponese.
+                <span class="font-bold text-blue-700">A.</span>
+                La ragazza intervistata vuole salvare il pianeta dal cambiamento
+                climatico.
               </legend>
             </div>
-
             <div class="flex-none p-2" data-risp="">
               <label for="si">Sì</label>
               <input
-                class="w-6 h-6 form-checkbox"
+                class="w-6 h-6 form-radio"
                 type="radio"
                 name="answer01"
                 value="true"
@@ -56,7 +58,7 @@
               />
               <label for="no">No</label>
               <input
-                class="w-6 h-6 form-checkbox"
+                class="w-6 h-6 form-radio"
                 type="radio"
                 name="answer01"
                 value="false"
@@ -68,13 +70,14 @@
           <fieldset class="flex justify-between">
             <div>
               <legend class="flex-initial p-2">
-                B. si occupa di tutela dell'ambiente.
+                <span class="font-bold text-blue-700">B.</span>
+                Agneta protesta contro le sparatorie nelle scuole.
               </legend>
             </div>
             <div class="flex-none p-2" data-risp="">
               <label for="si">Sì</label>
               <input
-                class="w-6 h-6 form-checkbox"
+                class="w-6 h-6 form-radio"
                 type="radio"
                 name="answer02"
                 value="true"
@@ -82,7 +85,7 @@
               />
               <label for="no">No</label>
               <input
-                class="w-6 h-6 form-checkbox"
+                class="w-6 h-6 form-radio"
                 type="radio"
                 name="answer02"
                 value="false"
@@ -94,13 +97,14 @@
           <fieldset class="flex justify-between">
             <div>
               <legend class="flex-initial p-2">
-                C. ridurre le emissioni di gas terra.
+                <span class="font-bold text-blue-700">C.</span>
+                Agneta ha deciso di scioperare fuori dalla sua scuola.
               </legend>
             </div>
             <div class="flex-none p-2" data-risp="">
               <label for="si">Sì</label>
               <input
-                class="w-6 h-6 form-checkbox"
+                class="w-6 h-6 form-radio"
                 type="radio"
                 name="answer03"
                 value="true"
@@ -108,7 +112,7 @@
               />
               <label for="no">No</label>
               <input
-                class="w-6 h-6 form-checkbox"
+                class="w-6 h-6 form-radio"
                 type="radio"
                 name="answer03"
                 value="false"
@@ -120,13 +124,15 @@
           <fieldset class="flex justify-between">
             <div>
               <legend class="flex-initial p-2">
-                D. non è uguale per tutti i Paesi.
+                <span class="font-bold text-blue-700">D.</span>
+                La mamma e il papà di Agneta l'hanno sempre sostenuta nella sua
+                battaglia.
               </legend>
             </div>
             <div class="flex-none p-2" data-risp="">
               <label for="si">Sì</label>
               <input
-                class="w-6 h-6 form-checkbox"
+                class="w-6 h-6 form-radio"
                 type="radio"
                 name="answer04"
                 value="true"
@@ -134,7 +140,7 @@
               />
               <label for="no">No</label>
               <input
-                class="w-6 h-6 form-checkbox"
+                class="w-6 h-6 form-radio"
                 type="radio"
                 name="answer04"
                 value="false"
@@ -146,13 +152,14 @@
           <fieldset class="flex justify-between">
             <div>
               <legend class="flex-initial p-2">
-                E. addirittura aumentare la loro riduzione.
+                <span class="font-bold text-blue-700">E.</span>
+                Agneta afferma che i suoi genitori vogliono che vada a scuola.
               </legend>
             </div>
             <div class="flex-none p-2" data-risp="">
               <label for="si">Sì</label>
               <input
-                class="w-6 h-6 form-checkbox"
+                class="w-6 h-6 form-radio"
                 type="radio"
                 name="answer05"
                 value="true"
@@ -160,7 +167,7 @@
               />
               <label for="no">No</label>
               <input
-                class="w-6 h-6 form-checkbox"
+                class="w-6 h-6 form-radio"
                 type="radio"
                 name="answer05"
                 value="false"
@@ -172,13 +179,14 @@
           <fieldset class="flex justify-between">
             <div>
               <legend class="flex-initial p-2">
-                F. proteggere boschi, foreste e terreni.
+                <span class="font-bold text-blue-700">F.</span>
+                Agneta ha smesso di mangiare solo la carne.
               </legend>
             </div>
             <div class="flex-none p-2" data-risp="">
               <label for="si">Sì</label>
               <input
-                class="w-6 h-6 form-checkbox"
+                class="w-6 h-6 form-radio"
                 type="radio"
                 name="answer06"
                 value="true"
@@ -186,7 +194,7 @@
               />
               <label for="no">No</label>
               <input
-                class="w-6 h-6 form-checkbox"
+                class="w-6 h-6 form-radio"
                 type="radio"
                 name="answer06"
                 value="false"
@@ -198,13 +206,14 @@
           <fieldset class="flex justify-between">
             <div>
               <legend class="flex-initial p-2">
-                G. aiutare Paesi per lo sviluppo.
+                <span class="font-bold text-blue-700">G.</span>
+                Agneta non usa più l'aereo.
               </legend>
             </div>
             <div class="flex-none p-2" data-risp="">
               <label for="si">Sì</label>
               <input
-                class="w-6 h-6 form-checkbox"
+                class="w-6 h-6 form-radio"
                 type="radio"
                 name="answer07"
                 value="true"
@@ -212,7 +221,7 @@
               />
               <label for="no">No</label>
               <input
-                class="w-6 h-6 form-checkbox"
+                class="w-6 h-6 form-radio"
                 type="radio"
                 name="answer07"
                 value="false"
@@ -224,13 +233,15 @@
           <fieldset class="flex justify-between">
             <div>
               <legend class="flex-initial p-2">
-                H. se non raggiungono gli obiettivi.
+                <span class="font-bold text-blue-700">H.</span>
+                Agneta dice di aver modificato le sue abitudini per applicare
+                quello che pensa.
               </legend>
             </div>
             <div class="flex-none p-2" data-risp="">
               <label for="si">Sì</label>
               <input
-                class="w-6 h-6 form-checkbox"
+                class="w-6 h-6 form-radio"
                 type="radio"
                 name="answer08"
                 value="true"
@@ -238,61 +249,9 @@
               />
               <label for="no">No</label>
               <input
-                class="w-6 h-6 form-checkbox"
+                class="w-6 h-6 form-radio"
                 type="radio"
                 name="answer08"
-                value="false"
-                id="no"
-              />
-            </div>
-          </fieldset>
-
-          <fieldset class="flex justify-between">
-            <div>
-              <legend class="flex-initial p-2">
-                I. deve ridurre le emissioni di più dell'8%.
-              </legend>
-            </div>
-            <div class="flex-none p-2" data-risp="">
-              <label for="si">Sì</label>
-              <input
-                class="w-6 h-6 form-checkbox"
-                type="radio"
-                name="answer09"
-                value="true"
-                id="si"
-              />
-              <label for="no">No</label>
-              <input
-                class="w-6 h-6 form-checkbox"
-                type="radio"
-                name="answer09"
-                value="false"
-                id="no"
-              />
-            </div>
-          </fieldset>
-
-          <fieldset class="flex justify-between">
-            <div>
-              <legend class="flex-initial p-2">
-                L. le regole sono più flessibili.
-              </legend>
-            </div>
-            <div class="flex-none p-2" data-risp="">
-              <label for="si">Sì</label>
-              <input
-                class="w-6 h-6 form-checkbox"
-                type="radio"
-                name="answer10"
-                value="true"
-                id="si"
-              />
-              <label for="no">No</label>
-              <input
-                class="w-6 h-6 form-checkbox"
-                type="radio"
-                name="answer10"
                 value="false"
                 id="no"
               />
@@ -310,31 +269,31 @@
           <li>
             <a
               class="px-4 py-2 text-blue-700 hover:underline"
-              href="./es07.html"
+              href="./es08.html"
               >Indietro</a
             >
           </li>
+
           <li>
             <a
               class="px-4 py-2 text-blue-700 hover:underline"
-              href="../../index.html"
+              href="../index.html"
               >Pagina iniziale</a
             >
           </li>
+
           <li>
             <a
               class="px-4 py-2 text-blue-700 hover:underline"
-              href="./es09.html"
-              >Avanti</a
+              href="../prova02/index.html"
+              >Prova 2</a
             >
           </li>
         </ol>
       </nav>
     </div>
-
     <script>
       const solutions = [
-        "false",
         "true",
         "false",
         "true",
@@ -342,17 +301,16 @@
         "true",
         "false",
         "true",
-        "false",
         "true",
       ];
 
-      const esercizio09 = document.getElementById("esercizio09");
+      const esercizio10 = document.getElementById("esercizio10");
 
-      esercizio09.addEventListener("submit", (e) => {
+      esercizio10.addEventListener("submit", (e) => {
         e.preventDefault();
 
         const fields = Array.from(
-          esercizio09.querySelectorAll("input[type='radio']")
+          esercizio10.querySelectorAll("input[type='radio']")
         );
 
         // if field.checked pass value to the parent
@@ -361,17 +319,17 @@
         });
 
         const attrs = Array.from(
-          esercizio09.querySelectorAll("div[data-risp]")
+          esercizio10.querySelectorAll("div[data-risp]")
         );
 
         const answers = attrs.map((item) => item.dataset.risp);
 
         const checkAnswer = (answer, idx) => {
           if (answer == solutions[idx].toString()) {
-            // console.log("👍", answer, solutions[idx]);
+            console.log("👍", answer, solutions[idx]);
             return true;
           } else {
-            // console.log("👎", answer, solutions[idx]);
+            console.log("👎", answer, solutions[idx]);
             return false;
           }
         };

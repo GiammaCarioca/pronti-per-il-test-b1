@@ -24,12 +24,24 @@ article {
   @apply leading-normal text-gray-100 bg-red-500 rounded shadow-lg;
 }
 
+.error span {
+  @apply text-gray-100;
+}
+
 .wrong {
   @apply leading-normal text-gray-100 bg-red-500 rounded shadow-lg;
 }
 
+.wrong span {
+  @apply text-gray-100;
+}
+
 .right {
   @apply leading-normal text-gray-100 bg-green-500 rounded shadow-lg;
+}
+
+.right span {
+  @apply text-gray-100;
 }
 
 .btn {
