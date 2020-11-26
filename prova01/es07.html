@@ -406,53 +406,52 @@
       </nav>
     </div>
     <script>
-      const solutions = ["c", "c", "b", "c", "a", "c", "a", "b"];
+      const solutions = {
+        answer01: "c",
+        answer02: "c",
+        answer03: "b",
+        answer04: "c",
+        answer05: "a",
+        answer06: "c",
+        answer07: "a",
+        answer08: "b",
+      };
 
       const esercizio08 = document.getElementById("esercizio08");
+
+      const answers = {
+        answer01: "",
+        answer02: "",
+        answer03: "",
+        answer04: "",
+        answer05: "",
+        answer06: "",
+        answer07: "",
+        answer08: "",
+      };
+
+      const checkAnswers = (answers, solutions) => {
+        const fields = Array.from(
+          esercizio08.querySelectorAll("input[type='radio']")
+        );
+        const checkedFields = fields.filter((field) => field.checked);
+
+        checkedFields?.forEach((field) => {
+          field.value === solutions[field.name]
+            ? field.parentNode.classList.add("right")
+            : field.parentNode.classList.add("error");
+        });
+      };
+
+      esercizio08.addEventListener(
+        "change",
+        (e) => e.target.checked && (answers[e.target.name] = e.target.value)
+      );
 
       esercizio08.addEventListener("submit", (e) => {
         e.preventDefault();
 
-        const fields = Array.from(
-          esercizio08.querySelectorAll("input[type='radio']")
-        );
-
-        // if field.checked pass value to the parent
-        fields.forEach((field, idx) => {
-          field.checked
-            ? (field.parentNode.parentNode.dataset.risp = field.value)
-            : "";
-        });
-
-        const attrs = Array.from(
-          esercizio08.querySelectorAll("div[data-risp]")
-        );
-
-        const answers = attrs.map((item) => item.dataset.risp);
-
-        const checkAnswer = (answer, idx) => {
-          if (answer == solutions[idx].toString()) {
-            console.log("👍", answer, solutions[idx]);
-            return true;
-          } else {
-            console.log("👎", answer, solutions[idx]);
-            return false;
-          }
-        };
-
-        attrs
-          .map((item) => item.dataset.risp)
-          .forEach((answer, idx) => {
-            if (!answer) return;
-
-            checkAnswer(answer, idx)
-              ? attrs[idx]
-                  .querySelector(`input[value="${answer}"]`)
-                  .parentNode.classList.add("right")
-              : attrs[idx]
-                  .querySelector(`input[value="${answer}"]`)
-                  .parentNode.classList.add("error");
-          });
+        checkAnswers(answers, solutions);
       });
     </script>
   </body>

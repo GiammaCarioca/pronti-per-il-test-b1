@@ -1,7 +1,7 @@
 export default function getSolutions() {
   return {
     prova01: {
-      es01: ["c"],
+      es01: { answer01: "c" },
       es02: [
         "true",
         "false",
