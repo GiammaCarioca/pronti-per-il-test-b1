@@ -6,6 +6,8 @@
     <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
     <title>Prova 1 | Esercizio 9</title>
     <link rel="stylesheet" href="../styles/output.css" />
+    <script src="https://unpkg.com/xstate@4/dist/xstate.js"></script>
+    <script type="module" src="../scripts/es02.js" defer></script>
   </head>
 
   <body>
@@ -37,7 +39,7 @@
         </audio>
       </figure>
 
-      <form action="#" id="esercizio10" autocomplete="off">
+      <form action="#" id="es09" autocomplete="off">
         <div class="space-y-4">
           <fieldset class="flex justify-between">
             <div>
@@ -292,59 +294,5 @@
         </ol>
       </nav>
     </div>
-    <script>
-      const solutions = [
-        "true",
-        "false",
-        "true",
-        "false",
-        "true",
-        "false",
-        "true",
-        "true",
-      ];
-
-      const esercizio10 = document.getElementById("esercizio10");
-
-      esercizio10.addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        const fields = Array.from(
-          esercizio10.querySelectorAll("input[type='radio']")
-        );
-
-        // if field.checked pass value to the parent
-        fields.forEach((field, idx) => {
-          field.checked ? (field.parentNode.dataset.risp = field.value) : "";
-        });
-
-        const attrs = Array.from(
-          esercizio10.querySelectorAll("div[data-risp]")
-        );
-
-        const answers = attrs.map((item) => item.dataset.risp);
-
-        const checkAnswer = (answer, idx) => {
-          if (answer == solutions[idx].toString()) {
-            console.log("👍", answer, solutions[idx]);
-            return true;
-          } else {
-            console.log("👎", answer, solutions[idx]);
-            return false;
-          }
-        };
-
-        attrs
-          .map((item) => item.dataset.risp)
-          .forEach((answer, idx) => {
-            attrs[idx].parentNode.classList.remove("right");
-            attrs[idx].parentNode.classList.remove("error");
-
-            checkAnswer(answer, idx)
-              ? attrs[idx].parentNode.classList.add("right")
-              : attrs[idx].parentNode.classList.add("error");
-          });
-      });
-    </script>
   </body>
 </html>

@@ -6,6 +6,8 @@
     <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
     <title>Prova 1 | Esercizio 7</title>
     <link rel="stylesheet" href="../styles/output.css" />
+    <script src="https://unpkg.com/xstate@4/dist/xstate.js"></script>
+    <script type="module" src="../scripts/es01.js" defer></script>
   </head>
 
   <body>
@@ -23,7 +25,7 @@
         </p>
       </header>
 
-      <form action="#" id="esercizio08" autocomplete="off">
+      <form action="#" id="es07" autocomplete="off">
         <figure class="my-6">
           <!-- <figcaption>Clicca per ascoltare la traccia:</figcaption> -->
           <audio controls src="../assets/media/Audio_01.mp3">
@@ -405,54 +407,5 @@
         </ul>
       </nav>
     </div>
-    <script>
-      const solutions = {
-        answer01: "c",
-        answer02: "c",
-        answer03: "b",
-        answer04: "c",
-        answer05: "a",
-        answer06: "c",
-        answer07: "a",
-        answer08: "b",
-      };
-
-      const esercizio08 = document.getElementById("esercizio08");
-
-      const answers = {
-        answer01: "",
-        answer02: "",
-        answer03: "",
-        answer04: "",
-        answer05: "",
-        answer06: "",
-        answer07: "",
-        answer08: "",
-      };
-
-      const checkAnswers = (answers, solutions) => {
-        const fields = Array.from(
-          esercizio08.querySelectorAll("input[type='radio']")
-        );
-        const checkedFields = fields.filter((field) => field.checked);
-
-        checkedFields?.forEach((field) => {
-          field.value === solutions[field.name]
-            ? field.parentNode.classList.add("right")
-            : field.parentNode.classList.add("error");
-        });
-      };
-
-      esercizio08.addEventListener(
-        "change",
-        (e) => e.target.checked && (answers[e.target.name] = e.target.value)
-      );
-
-      esercizio08.addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        checkAnswers(answers, solutions);
-      });
-    </script>
   </body>
 </html>

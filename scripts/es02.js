@@ -11,36 +11,39 @@ const solutions = allSolutions[filePath];
 const form = `${filePath}`;
 const esercizio = document.getElementById(form);
 
-const data = Array.from(esercizio.querySelectorAll("div[data-risp]"));
+const answers = {};
 
-const checkAnswer = (answer, idx) => (answer === solutions[idx] ? true : false);
+const checkAnswers = (answers, solutions) => {
+  const fields = Array.from(esercizio.querySelectorAll("input[type='radio']"));
+  const checkedFields = fields.filter((field) => field.checked);
 
-const addClassRight = (idx) => data[idx].parentNode.classList.add("right");
+  checkedFields?.forEach((field) => {
+    field.parentNode.parentNode.classList.remove("right");
+    field.parentNode.parentNode.classList.remove("error");
 
-const addClassWrong = (idx) => data[idx].parentNode.classList.add("error");
+    field.value === solutions[field.name]
+      ? field.parentNode.parentNode.classList.add("right")
+      : field.parentNode.parentNode.classList.add("error");
+  });
+};
 
-esercizio.addEventListener("change", (e) => {
-  e.target.checked && (e.target.parentNode.dataset.risp = e.target.value);
+esercizio?.addEventListener("change", (e) => {
+  e.target.checked && (answers[e.target.name] = e.target.value);
+
+  // Send event
   service.send("INPUT");
 });
 
-esercizio.addEventListener("submit", (e) => {
+esercizio?.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const answers = data.map((item) => item.dataset.risp);
-
-  if (!answers) return;
-
-  answers.forEach((answer, idx) => {
-    data[idx].parentNode.classList.remove("right");
-    data[idx].parentNode.classList.remove("error");
-
-    checkAnswer(answer, idx) ? addClassRight(idx) : addClassWrong(idx);
-  });
+  checkAnswers(answers, solutions);
 
   service.send("SUBMIT");
 
+  // Stop the service when you are no longer using it.
   service.stop();
 });
 
+// Start the service
 service.start();
