@@ -13,22 +13,28 @@ const esercizio = document.getElementById(form);
 
 const answers = {};
 
+const normalizeAnswer = (answer) => {
+  return answer.trim().toLowerCase();
+};
+
 const checkAnswers = (answers, solutions) => {
-  const fields = Array.from(esercizio.querySelectorAll("input[type='radio']"));
-  const checkedFields = fields.filter((field) => field.checked);
+  if (!answers || !solutions) return;
 
-  checkedFields?.forEach((field) => {
-    field.parentNode.parentNode.classList.remove("right");
-    field.parentNode.parentNode.classList.remove("error");
+  const fields = Array.from(esercizio.querySelectorAll("input[type='text']"));
+  const textFields = fields.filter((field) => field.value);
 
-    field.value === solutions[field.name]
-      ? field.parentNode.parentNode.classList.add("right")
-      : field.parentNode.parentNode.classList.add("error");
+  textFields?.forEach((field) => {
+    field.classList.remove("right");
+    field.classList.remove("error");
+
+    answers[field.name] === solutions[field.name]
+      ? field.classList.add("right")
+      : field.classList.add("error");
   });
 };
 
-esercizio?.addEventListener("change", (e) => {
-  e.target.checked && (answers[e.target.name] = e.target.value);
+esercizio?.addEventListener("keyup", (e) => {
+  answers[e.target.name] = normalizeAnswer(e.target.value);
 
   // Send event
   service.send("INPUT");

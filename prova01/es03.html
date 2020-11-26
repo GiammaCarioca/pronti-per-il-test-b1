@@ -6,6 +6,8 @@
     <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
     <title>Prova 1 | Esercizio 3</title>
     <link rel="stylesheet" href="../styles/output.css" />
+    <script src="https://unpkg.com/xstate@4/dist/xstate.js"></script>
+    <script type="module" src="../scripts/handleGapFilling.js" defer></script>
   </head>
   <body>
     <div class="container wrapper lg:w-2/3 md:p-20">
@@ -22,7 +24,7 @@
         </p>
       </header>
 
-      <form action="" id="esercizio03" autocomplete="off">
+      <form action="" id="es03" autocomplete="off">
         <div class="space-y-4">
           <section>
             <p class="py-1 leading-relaxed">
@@ -317,49 +319,5 @@
         </ol>
       </nav>
     </div>
-    <script>
-      const solutions = [
-        ["ero", "andavo", "siamo andati"],
-        ["era", "aveva", "aveva", "si è arrabbiato"],
-        ["correva", "è caduta", "ha preso", "ha dovuto"],
-        ["avevo", "ho ricevuto", "ero", "volevo", "conoscevo"],
-        ["avevate", "vi siete sposati"],
-        ["ho studiato", "ho iniziato"],
-      ].flat();
-
-      const esercizio03 = document.getElementById("esercizio03");
-
-      esercizio03.addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        const fields = Array.from(
-          esercizio03.querySelectorAll("input[type='text']")
-        );
-        const answers = fields.map((field) => field.value);
-
-        const normalizeAnswer = (answer) => {
-          return answer.trim().toLowerCase();
-        };
-
-        const checkAnswer = (answer, idx) => {
-          // if (answer === "" || answer === "Scrivi la tua risposta") {
-          //   fields[idx].value = "scrivi la tua risposta";
-          //   return;
-          // }
-
-          const rawAnswer = normalizeAnswer(answer);
-
-          if (rawAnswer === solutions[idx]) {
-            fields[idx].style.border = "1px solid green";
-            // console.log("👍");
-          } else {
-            fields[idx].style.border = "1px solid red";
-            // console.log("👎");
-          }
-        };
-
-        answers.forEach((answer, idx) => checkAnswer(answer, idx));
-      });
-    </script>
   </body>
 </html>

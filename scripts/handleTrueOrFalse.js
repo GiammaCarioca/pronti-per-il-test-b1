@@ -14,18 +14,18 @@ const esercizio = document.getElementById(form);
 const answers = {};
 
 const checkAnswers = (answers, solutions) => {
+  if (!answers || !solutions) return;
+
   const fields = Array.from(esercizio.querySelectorAll("input[type='radio']"));
   const checkedFields = fields.filter((field) => field.checked);
 
   checkedFields?.forEach((field) => {
-    field.parentNode.parentNode.querySelectorAll("label").forEach((label) => {
-      label.classList.remove("error");
-      label.classList.remove("right");
-    });
+    field.parentNode.parentNode.classList.remove("right");
+    field.parentNode.parentNode.classList.remove("error");
 
-    field.value === solutions[field.name]
-      ? field.parentNode.classList.add("right")
-      : field.parentNode.classList.add("error");
+    answers[field.name] === solutions[field.name]
+      ? field.parentNode.parentNode.classList.add("right")
+      : field.parentNode.parentNode.classList.add("error");
   });
 };
 

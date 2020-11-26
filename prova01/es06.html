@@ -6,6 +6,8 @@
     <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
     <title>Prova 1 | Esercizio 6</title>
     <link rel="stylesheet" href="../styles/output.css" />
+    <script src="https://unpkg.com/xstate@4/dist/xstate.js"></script>
+    <script type="module" src="../scripts/handleGapFilling.js" defer></script>
   </head>
 
   <body>
@@ -22,7 +24,7 @@
         </p>
       </header>
 
-      <form action="#" id="esercizio07" autocomplete="off">
+      <form action="#" id="es06" autocomplete="off">
         <div class="space-y-6">
           <section>
             <p class="py-1 leading-relaxed">
@@ -124,42 +126,5 @@
         </ol>
       </nav>
     </div>
-    <script>
-      const solutions = ["la", "gli", "mi", "ci", "ne"];
-
-      const esercizio07 = document.getElementById("esercizio07");
-
-      esercizio07.addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        const fields = Array.from(
-          esercizio07.querySelectorAll("input[type='text']")
-        );
-        const answers = fields.map((field) => field.value);
-
-        const normalizeAnswer = (answer) => {
-          return answer.trim().toLowerCase();
-        };
-
-        const checkAnswer = (answer, idx) => {
-          // if (answer === "" || answer === "Scrivi la tua risposta") {
-          //   fields[idx].value = "Scrivi la tua risposta";
-          //   return;
-          // }
-
-          const rawAnswer = normalizeAnswer(answer);
-
-          if (rawAnswer === solutions[idx]) {
-            fields[idx].style.border = "1px solid green";
-            // console.log("👍");
-          } else {
-            fields[idx].style.border = "1px solid red";
-            // console.log("👎");
-          }
-        };
-
-        answers.forEach((answer, idx) => checkAnswer(answer, idx));
-      });
-    </script>
   </body>
 </html>

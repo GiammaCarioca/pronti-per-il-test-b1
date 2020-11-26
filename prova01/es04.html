@@ -6,6 +6,8 @@
     <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
     <title>Prova 1 | Esercizio 4</title>
     <link rel="stylesheet" href="../styles/output.css" />
+    <script src="https://unpkg.com/xstate@4/dist/xstate.js"></script>
+    <script type="module" src="../scripts/handleGapFilling.js" defer></script>
   </head>
 
   <body>
@@ -23,7 +25,7 @@
         </p>
       </header>
 
-      <form action="" id="esercizio05" autocomplete="off">
+      <form action="" id="es04" autocomplete="off">
         <div class="m-6 text-xl font-bold tracking-wide text-blue-700">
           esistere * potere * usare * essere * telefonare * arrivare * scrivere
           * aspettare * essere
@@ -135,52 +137,5 @@
         </ol>
       </nav>
     </div>
-    <script>
-      const solutions = [
-        "era",
-        "sono arrivati",
-        "erano",
-        "esistevano",
-        "usavano",
-        "scrivevano",
-        "telefonavano",
-        "potevi",
-        "ho aspettato",
-      ];
-
-      const esercizio05 = document.getElementById("esercizio05");
-
-      esercizio05.addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        const fields = Array.from(
-          esercizio05.querySelectorAll("input[type='text']")
-        );
-        const answers = fields.map((field) => field.value);
-
-        const normalizeAnswer = (answer) => {
-          return answer.trim().toLowerCase();
-        };
-
-        const checkAnswer = (answer, idx) => {
-          // if (answer === "" || answer === "Scrivi la tua risposta") {
-          //   fields[idx].value = "scrivi la tua risposta";
-          //   return;
-          // }
-
-          const rawAnswer = normalizeAnswer(answer);
-
-          if (rawAnswer === solutions[idx]) {
-            fields[idx].style.border = "1px solid green";
-            // console.log("👍");
-          } else {
-            fields[idx].style.border = "1px solid red";
-            // console.log("👎");
-          }
-        };
-
-        answers.forEach((answer, idx) => checkAnswer(answer, idx));
-      });
-    </script>
   </body>
 </html>
