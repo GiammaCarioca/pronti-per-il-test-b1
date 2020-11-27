@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
-    <title>Prova 2 | Esercizio 10</title>
+    <title>Prova 3 | Esercizio 8</title>
     <link rel="stylesheet" href="../styles/output.css" />
+    <script src="https://unpkg.com/xstate@4/dist/xstate.js"></script>
     <script type="module" src="../scripts/main.js" defer></script>
     <script src="../scripts/handleTrueOrFalse.js" defer></script>
   </head>
@@ -13,40 +14,39 @@
   <body>
     <div class="container wrapper lg:w-2/3 md:p-20">
       <header class="my-6">
-        <h1 class="hidden">Prova 2: Scuola</h1>
+        <h1 class="hidden">Prova 3: Lavoro</h1>
         <p class="hidden" role="doc-subtitle">Comprensione dell'ascolto</p>
         <p
           role="doc-subtitle"
           aria-roledescription="consegna dell'esercizio"
           class="instructions md:text-2xl"
         >
-          10. Ascolta il testo e poi leggi le affermazioni seguenti. Non tutte
-          sono presenti nel testo. Indica se l'affermazione è presente (SÌ) o se
-          NON è presente (NO).
+          8. Ascolta il testo che parla della regolamentazione del lavoro in
+          Italia e poi leggi le affermazioni seguenti. Non tutte sono presenti
+          nel testo. Indica se l'affermazione è presente (SÌ) o se NON è
+          presente (NO).
           <span
             class="block px-4 py-3 my-6 text-lg font-bold tracking-wide text-blue-700 bg-blue-100 shadow-lg"
-            >Le affermazioni riportano il contenuto del testo senza ripetere
-            necessariamente le parole.</span
+            >Le affermazioni ripetono le stesse parole del testo.</span
           >
         </p>
       </header>
 
       <figure class="my-6">
         <!-- <figcaption>Clicca per ascoltare la traccia:</figcaption> -->
-        <audio controls src="../assets/media/Audio_07.mp3">
+        <audio controls src="../assets/media/Audio_10.mp3">
           Your browser does not support the
           <code>audio</code> element.
         </audio>
       </figure>
 
-      <form action="" id="es10" autocomplete="off">
+      <form action="" id="es08" autocomplete="off">
         <div class="space-y-4">
           <fieldset class="flex justify-between">
             <div>
               <legend class="flex-initial p-2">
                 <span class="font-bold text-blue-700">A.</span>
-                Il programma radiofonico spiega come difendersi dal bullismo e
-                dal cyberbullismo.
+                modificabile in senso collettivo
               </legend>
             </div>
 
@@ -74,9 +74,7 @@
             <div>
               <legend class="flex-initial p-2">
                 <span class="font-bold text-blue-700">B.</span>
-                Per iscriversi al progetto
-                <span class="italic">Stop ai bulli</span> bisogna andare sul
-                sito.
+                escluse le ore di straordinario
               </legend>
             </div>
             <div class="flex-none p-2">
@@ -103,7 +101,7 @@
             <div>
               <legend class="flex-initial p-2">
                 <span class="font-bold text-blue-700">C.</span>
-                Da quest’anno possono partecipare anche le scuole primarie.
+                normale orario di lavoro
               </legend>
             </div>
             <div class="flex-none p-2">
@@ -130,7 +128,7 @@
             <div>
               <legend class="flex-initial p-2">
                 <span class="font-bold text-blue-700">D.</span>
-                Il progetto è rivolto solo agli studenti e agli insegnanti.
+                non superare le 250 ore
               </legend>
             </div>
             <div class="flex-none p-2">
@@ -157,8 +155,7 @@
             <div>
               <legend class="flex-initial p-2">
                 <span class="font-bold text-blue-700">E.</span>
-                Secondo il progetto è importante la collaborazione tra docenti,
-                studenti e genitori.
+                diritto al riposo giornaliero
               </legend>
             </div>
             <div class="flex-none p-2">
@@ -185,8 +182,7 @@
             <div>
               <legend class="flex-initial p-2">
                 <span class="font-bold text-blue-700">F.</span>
-                Gli psicologi spiegheranno come usare le nuove tecnologie in
-                classe.
+                modalità e durata delle pause
               </legend>
             </div>
             <div class="flex-none p-2">
@@ -213,7 +209,7 @@
             <div>
               <legend class="flex-initial p-2">
                 <span class="font-bold text-blue-700">G.</span>
-                Al progetto parteciperanno anche persone famose.
+                in presenza di previsione contrattuale
               </legend>
             </div>
             <div class="flex-none p-2">
@@ -240,8 +236,7 @@
             <div>
               <legend class="flex-initial p-2">
                 <span class="font-bold text-blue-700">H.</span>
-                Secondo il giornalista, questo progetto sarà molto utile a
-                combattere il bullismo nelle scuole.
+                che non rientra nell’orario
               </legend>
             </div>
             <div class="flex-none p-2">
@@ -263,6 +258,114 @@
               />
             </div>
           </fieldset>
+
+          <fieldset class="flex justify-between">
+            <div>
+              <legend class="flex-initial p-2">
+                <span class="font-bold text-blue-700">I.</span>
+                in regola divergenti
+              </legend>
+            </div>
+            <div class="flex-none p-2">
+              <label for="si">Sì</label>
+              <input
+                class="w-6 h-6 form-radio"
+                type="radio"
+                name="answer09"
+                value="true"
+                id="si"
+              />
+              <label for="no">No</label>
+              <input
+                class="w-6 h-6 form-radio"
+                type="radio"
+                name="answer09"
+                value="false"
+                id="no"
+              />
+            </div>
+          </fieldset>
+
+          <fieldset class="flex justify-between">
+            <div>
+              <legend class="flex-initial p-2">
+                <span class="font-bold text-blue-700">L.</span>
+                in giorni diversi
+              </legend>
+            </div>
+            <div class="flex-none p-2">
+              <label for="si">Sì</label>
+              <input
+                class="w-6 h-6 form-radio"
+                type="radio"
+                name="answer10"
+                value="true"
+                id="si"
+              />
+              <label for="no">No</label>
+              <input
+                class="w-6 h-6 form-radio"
+                type="radio"
+                name="answer10"
+                value="false"
+                id="no"
+              />
+            </div>
+          </fieldset>
+
+          <fieldset class="flex justify-between">
+            <div>
+              <legend class="flex-initial p-2">
+                <span class="font-bold text-blue-700">M.</span>
+                periodo annuale di ferie
+              </legend>
+            </div>
+            <div class="flex-none p-2">
+              <label for="si">Sì</label>
+              <input
+                class="w-6 h-6 form-radio"
+                type="radio"
+                name="answer11"
+                value="true"
+                id="si"
+              />
+              <label for="no">No</label>
+              <input
+                class="w-6 h-6 form-radio"
+                type="radio"
+                name="answer11"
+                value="false"
+                id="no"
+              />
+            </div>
+          </fieldset>
+
+          <fieldset class="flex justify-between">
+            <div>
+              <legend class="flex-initial p-2">
+                <span class="font-bold text-blue-700">N.</span>
+                il caso di risoluzione del rapporto
+              </legend>
+            </div>
+            <div class="flex-none p-2">
+              <label for="si">Sì</label>
+              <input
+                class="w-6 h-6 form-radio"
+                type="radio"
+                name="answer12"
+                value="true"
+                id="si"
+              />
+              <label for="no">No</label>
+              <input
+                class="w-6 h-6 form-radio"
+                type="radio"
+                name="answer12"
+                value="false"
+                id="no"
+              />
+            </div>
+          </fieldset>
         </div>
 
         <div class="flex justify-center">
@@ -275,7 +378,7 @@
           <li>
             <a
               class="px-4 py-2 text-blue-700 hover:underline"
-              href="./es09.html"
+              href="./es07.html"
               >Indietro</a
             >
           </li>
@@ -289,8 +392,8 @@
           <li>
             <a
               class="px-4 py-2 text-blue-700 hover:underline"
-              href="../prova03/index.html"
-              >Prova 3</a
+              href="./es09.html"
+              >Avanti</a
             >
           </li>
         </ol>

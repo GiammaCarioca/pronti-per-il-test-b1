@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
-    <title>Prova 2 | Esercizio 10</title>
+    <title>Prova 3 | Esercizio 9</title>
     <link rel="stylesheet" href="../styles/output.css" />
+    <script src="https://unpkg.com/xstate@4/dist/xstate.js"></script>
     <script type="module" src="../scripts/main.js" defer></script>
     <script src="../scripts/handleTrueOrFalse.js" defer></script>
   </head>
@@ -13,16 +14,16 @@
   <body>
     <div class="container wrapper lg:w-2/3 md:p-20">
       <header class="my-6">
-        <h1 class="hidden">Prova 2: Scuola</h1>
+        <h1 class="hidden">Prova 3: Lavoro</h1>
         <p class="hidden" role="doc-subtitle">Comprensione dell'ascolto</p>
         <p
           role="doc-subtitle"
           aria-roledescription="consegna dell'esercizio"
           class="instructions md:text-2xl"
         >
-          10. Ascolta il testo e poi leggi le affermazioni seguenti. Non tutte
-          sono presenti nel testo. Indica se l'affermazione è presente (SÌ) o se
-          NON è presente (NO).
+          9. Ascolta il testo poi leggi le affermazioni seguenti. Non tutte sono
+          presenti nel testo. Indica se l'affermazione è presente (SÌ) o se NON
+          è presente (NO).
           <span
             class="block px-4 py-3 my-6 text-lg font-bold tracking-wide text-blue-700 bg-blue-100 shadow-lg"
             >Le affermazioni riportano il contenuto del testo senza ripetere
@@ -33,23 +34,21 @@
 
       <figure class="my-6">
         <!-- <figcaption>Clicca per ascoltare la traccia:</figcaption> -->
-        <audio controls src="../assets/media/Audio_07.mp3">
+        <audio controls src="../assets/media/Audio_11.mp3">
           Your browser does not support the
           <code>audio</code> element.
         </audio>
       </figure>
 
-      <form action="" id="es10" autocomplete="off">
+      <form action="#" id="es09" autocomplete="off">
         <div class="space-y-4">
           <fieldset class="flex justify-between">
             <div>
               <legend class="flex-initial p-2">
                 <span class="font-bold text-blue-700">A.</span>
-                Il programma radiofonico spiega come difendersi dal bullismo e
-                dal cyberbullismo.
+                Nel 2019 ci sono più disoccupati che negli anni precedenti.
               </legend>
             </div>
-
             <div class="flex-none p-2">
               <label for="si">Sì</label>
               <input
@@ -74,9 +73,7 @@
             <div>
               <legend class="flex-initial p-2">
                 <span class="font-bold text-blue-700">B.</span>
-                Per iscriversi al progetto
-                <span class="italic">Stop ai bulli</span> bisogna andare sul
-                sito.
+                I laureati trovano lavoro più facilmente.
               </legend>
             </div>
             <div class="flex-none p-2">
@@ -103,7 +100,7 @@
             <div>
               <legend class="flex-initial p-2">
                 <span class="font-bold text-blue-700">C.</span>
-                Da quest’anno possono partecipare anche le scuole primarie.
+                Nadia ha scelto Scienze Politiche anche perché le piaceva.
               </legend>
             </div>
             <div class="flex-none p-2">
@@ -130,7 +127,7 @@
             <div>
               <legend class="flex-initial p-2">
                 <span class="font-bold text-blue-700">D.</span>
-                Il progetto è rivolto solo agli studenti e agli insegnanti.
+                Nadia non è soddisfatta della sua facoltà.
               </legend>
             </div>
             <div class="flex-none p-2">
@@ -157,8 +154,7 @@
             <div>
               <legend class="flex-initial p-2">
                 <span class="font-bold text-blue-700">E.</span>
-                Secondo il progetto è importante la collaborazione tra docenti,
-                studenti e genitori.
+                Nadia è disoccupata.
               </legend>
             </div>
             <div class="flex-none p-2">
@@ -185,8 +181,7 @@
             <div>
               <legend class="flex-initial p-2">
                 <span class="font-bold text-blue-700">F.</span>
-                Gli psicologi spiegheranno come usare le nuove tecnologie in
-                classe.
+                Nell’intervista Nadia spiega come trovare lavoro.
               </legend>
             </div>
             <div class="flex-none p-2">
@@ -213,7 +208,8 @@
             <div>
               <legend class="flex-initial p-2">
                 <span class="font-bold text-blue-700">G.</span>
-                Al progetto parteciperanno anche persone famose.
+                Secondo Nadia, le aziende cercano persone che abbiano già
+                lavorato.
               </legend>
             </div>
             <div class="flex-none p-2">
@@ -240,8 +236,7 @@
             <div>
               <legend class="flex-initial p-2">
                 <span class="font-bold text-blue-700">H.</span>
-                Secondo il giornalista, questo progetto sarà molto utile a
-                combattere il bullismo nelle scuole.
+                Gli stipendi dei neolaureati sono bassi.
               </legend>
             </div>
             <div class="flex-none p-2">
@@ -275,10 +270,11 @@
           <li>
             <a
               class="px-4 py-2 text-blue-700 hover:underline"
-              href="./es09.html"
+              href="./es08.html"
               >Indietro</a
             >
           </li>
+
           <li>
             <a
               class="px-4 py-2 text-blue-700 hover:underline"
@@ -286,11 +282,12 @@
               >Pagina iniziale</a
             >
           </li>
+
           <li>
             <a
               class="px-4 py-2 text-blue-700 hover:underline"
-              href="../prova03/index.html"
-              >Prova 3</a
+              href="../prova04/index.html"
+              >Prova 4</a
             >
           </li>
         </ol>
