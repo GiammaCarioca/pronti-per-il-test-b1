@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <title>Esercizio 3</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <form action="#" id="esercizio03">
+      <h1>3. Scegli la preposizione semplice o articolata.</h1>
+
+      <ol>
+        <li>
+          Davanti
+          <input type="radio" name="answer01" id="A1" value="a" />
+          <label for="A1">a</label> /
+          <input type="radio" name="answer01" id="A2" value="al" />
+          <label for="A2">al</label>
+          Duomo di Firenze c'è il Battistero di San Giovanni.
+        </li>
+
+        <li>
+          In Italia,
+          <input type="radio" name="answer02" id="B1" value="nei" />
+          <label for="B1">nei</label> /
+          <input type="radio" name="answer02" id="B2" value="negli" />
+          <label for="B2">negli</label>
+          anni Sessanta c'è stato il boom economico.
+        </li>
+
+        <li>
+          Vado
+          <input type="radio" name="answer03" id="C1" value="in" />
+          <label for="C1">in</label> /
+          <input type="radio" name="answer03" id="C2" value="nella" />
+          <label for="C2">nella</label>
+          camera a riposare, sono a pezzi.
+        </li>
+
+        <li>
+          Napoli è il capoluogo
+          <input type="radio" name="answer04" id="D1" value="di" />
+          <label for="D1">di</label> /
+          <input type="radio" name="answer04" id="D2" value="della" />
+          <label for="D2">della</label>
+          Campania.
+        </li>
+
+        <li>
+          Penso spesso
+          <input type="radio" name="answer05" id="F1" value="a" />
+          <label for="F1">a</label> /
+          <input type="radio" name="answer05" id="F2" value="alla" />
+          <label for="F2">alla</label>
+          mia sorella, mi manca molto.
+        </li>
+
+        <li>
+          Lui è il marito
+          <input type="radio" name="answer06" id="G1" value="di" />
+          <label for="G1">di</label> /
+          <input type="radio" name="answer06" id="G2" value="della" />
+          <label for="G2">della</label>
+          mia amica Eleonora, lavora
+          <input type="radio" name="answer07" id="H1" value="in" />
+          <label for="H1">in</label> /
+          <input type="radio" name="answer07" id="H2" value="nella" />
+          <label for="H2">nella</label>
+          banca.
+        </li>
+
+        <li>
+          Maria e Virgilio sono andati ad abitare
+          <input type="radio" name="answer08" id="I1" value="in" />
+          <label for="I1">in</label> /
+          <input type="radio" name="answer08" id="I2" value="nella" />
+          <label for="I2">nella</label>
+          campagna.
+        </li>
+
+        <li>
+          Il treno per Roma parte
+          <input type="radio" name="answer09" id="J1" value="da" />
+          <label for="J1">da</label> /
+          <input type="radio" name="answer09" id="J2" value="dal" />
+          <label for="J2">dal</label>
+          binario 12.
+        </li>
+
+        <li>
+          <input type="radio" name="answer10" id="L1" value="tra i" />
+          <label for="L1">Tra i</label> /
+          <input type="radio" name="answer10" id="L2" value="tra" />
+          <label for="L2">Tra</label>
+          miei amici, Alessia è la più simpatica.
+        </li>
+
+        <li>
+          La pizzeria Da Mimmo è lontana
+          <input type="radio" name="answer11" id="M1" value="da" />
+          <label for="M1">da</label> /
+          <input type="radio" name="answer11" id="M2" value="dalla" />
+          <label for="M2">dalla</label>
+          casa mia.
+        </li>
+      </ol>
+
+      <button type="submit">Controlla</button>
+    </form>
+
+    <script>
+      const solutions = [
+        "al",
+        "negli",
+        "in",
+        "della",
+        "a",
+        "della",
+        "in",
+        "in",
+        "dal",
+        "tra i",
+        "da",
+      ];
+
+      const esercizio03 = document.getElementById("esercizio03");
+
+      esercizio03.addEventListener("submit", (e) => {
+        const radioFields = esercizio03.querySelectorAll("input[type='radio']");
+        const radioFieldsArray = Array.from(radioFields);
+        // console.log(radioFieldsArray)
+
+        e.preventDefault();
+
+        // const answers = radioFieldsArray
+        //   .filter((item) => item.checked)
+        //   .map((item) => item.value);
+        // console.log(answers)
+
+        const answers = radioFieldsArray.map((item) =>
+          item.checked ? item.value : ""
+        );
+
+        const checkAnswer = (answer, idx) => {
+          if (answer === solutions[idx].toString()) {
+            console.log("risposta corretta!", answer, solutions[idx]);
+          } else {
+            console.log("risposta sbagliata!", answer, solutions[idx]);
+          }
+        };
+
+        answers.forEach((answer, idx) => checkAnswer(answer, idx));
+      });
+    </script>
+  </body>
+</html>

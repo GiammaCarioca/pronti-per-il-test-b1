@@ -1,61 +1,49 @@
-(function () {
-  const pathArray = window.location.pathname.split("/");
-  const filePath = pathArray[pathArray.length - 1].substring(0, 4);
-  const directoryPath = pathArray[pathArray.length - 2];
+import { solutions, esercizio, service } from "./main.js";
 
-  const allSolutions = getSolutions()[`${directoryPath}`];
-  const solutions = allSolutions[filePath];
+const answers = {};
 
-  const form = `${filePath}`;
-  const esercizio = document.getElementById(form);
+const normalizeAnswer = (answer) => {
+  return answer.trim().toLowerCase();
+};
 
-  const answers = {};
+const checkAnswers = (answers, solutions) => {
+  if (!answers || !solutions) return;
 
-  const normalizeAnswer = (answer) => {
-    return answer.trim().toLowerCase();
-  };
+  const optionElements = Array.from(
+    esercizio.querySelectorAll("option:checked")
+  );
 
-  const checkAnswers = (answers, solutions) => {
-    if (!answers || !solutions) return;
+  const optionsChecked = optionElements.filter((option) => option.value !== "");
 
-    const optionElements = Array.from(
-      esercizio.querySelectorAll("option:checked")
-    );
+  optionsChecked?.forEach((option) => {
+    const currentSelect = option.parentNode;
 
-    const optionsChecked = optionElements.filter(
-      (option) => option.value !== ""
-    );
+    currentSelect.classList.remove("right");
+    currentSelect.classList.remove("error");
 
-    optionsChecked?.forEach((option) => {
-      const currentSelect = option.parentNode;
-
-      currentSelect.classList.remove("right");
-      currentSelect.classList.remove("error");
-
-      answers[currentSelect.name] === solutions[currentSelect.name]
-        ? currentSelect.classList.add("right")
-        : currentSelect.classList.add("error");
-    });
-  };
-
-  esercizio?.addEventListener("change", (e) => {
-    answers[e.target.name] = normalizeAnswer(e.target.value);
-
-    // Send event
-    // service.send("INPUT");
+    answers[currentSelect.name] === solutions[currentSelect.name]
+      ? currentSelect.classList.add("right")
+      : currentSelect.classList.add("error");
   });
+};
 
-  esercizio?.addEventListener("submit", (e) => {
-    e.preventDefault();
+esercizio?.addEventListener("change", (e) => {
+  answers[e.target.name] = normalizeAnswer(e.target.value);
 
-    checkAnswers(answers, solutions);
+  // Send event
+  service.send("INPUT");
+});
 
-    // service.send("SUBMIT");
+esercizio?.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-    // Stop the service when you are no longer using it.
-    // service.stop();
-  });
+  checkAnswers(answers, solutions);
 
-  // Start the service
-  // service.start();
-})();
+  service.send("SUBMIT");
+
+  // Stop the service when you are no longer using it.
+  service.stop();
+});
+
+// Start the service
+service.start();

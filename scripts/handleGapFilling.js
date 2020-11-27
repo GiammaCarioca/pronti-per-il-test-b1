@@ -1,54 +1,44 @@
-(function () {
-  const pathArray = window.location.pathname.split("/");
-  const filePath = pathArray[pathArray.length - 1].substring(0, 4);
-  const directoryPath = pathArray[pathArray.length - 2];
+import { solutions, esercizio, service } from "./main.js";
 
-  const allSolutions = getSolutions()[`${directoryPath}`];
-  const solutions = allSolutions[filePath];
+const answers = {};
 
-  const form = `${filePath}`;
-  const esercizio = document.getElementById(form);
+const normalizeAnswer = (answer) => {
+  return answer.trim().toLowerCase();
+};
 
-  const answers = {};
+const checkAnswers = (answers, solutions) => {
+  if (!answers || !solutions) return;
 
-  const normalizeAnswer = (answer) => {
-    return answer.trim().toLowerCase();
-  };
+  const fields = Array.from(esercizio.querySelectorAll("input[type='text']"));
+  const textFields = fields.filter((field) => field.value);
 
-  const checkAnswers = (answers, solutions) => {
-    if (!answers || !solutions) return;
+  textFields?.forEach((field) => {
+    field.classList.remove("right");
+    field.classList.remove("error");
 
-    const fields = Array.from(esercizio.querySelectorAll("input[type='text']"));
-    const textFields = fields.filter((field) => field.value);
-
-    textFields?.forEach((field) => {
-      field.classList.remove("right");
-      field.classList.remove("error");
-
-      answers[field.name] === solutions[field.name]
-        ? field.classList.add("right")
-        : field.classList.add("error");
-    });
-  };
-
-  esercizio?.addEventListener("keyup", (e) => {
-    answers[e.target.name] = normalizeAnswer(e.target.value);
-
-    // Send event
-    // service.send("INPUT");
+    answers[field.name] === solutions[field.name]
+      ? field.classList.add("right")
+      : field.classList.add("error");
   });
+};
 
-  esercizio?.addEventListener("submit", (e) => {
-    e.preventDefault();
+esercizio?.addEventListener("keyup", (e) => {
+  answers[e.target.name] = normalizeAnswer(e.target.value);
 
-    checkAnswers(answers, solutions);
+  // Send event
+  service.send("INPUT");
+});
 
-    // service.send("SUBMIT");
+esercizio?.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-    // Stop the service when you are no longer using it.
-    // service.stop();
-  });
+  checkAnswers(answers, solutions);
 
-  // Start the service
-  // service.start();
-})();
+  service.send("SUBMIT");
+
+  // Stop the service when you are no longer using it.
+  service.stop();
+});
+
+// Start the service
+service.start();

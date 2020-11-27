@@ -6,8 +6,9 @@
     <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
     <title>Prova 2 | Esercizio 3</title>
     <link rel="stylesheet" href="../styles/output.css" />
+    <script src="https://unpkg.com/xstate@4/dist/xstate.js"></script>
     <script type="module" src="../scripts/main.js" defer></script>
-    <script src="../scripts/handleGapFilling.js" defer></script>
+    <script type="module" src="../scripts/handleGapFilling.js" defer></script>
   </head>
 
   <body>
@@ -113,8 +114,8 @@
                 class="gap-pronoun"
                 aria-label="fill the gap"
                 type="text"
-                name="answer01"
-                id="answer01"
+                name="answer06"
+                id="answer06"
               />
               posso prendere dall'armadio?
             </p>
@@ -142,42 +143,5 @@
         </ol>
       </nav>
     </div>
-    <script>
-      const solutions = ["la", "le", "ne", "lo", "lo", "li"];
-
-      const esercizio03 = document.getElementById("esercizio03");
-
-      esercizio03.addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        const fields = Array.from(
-          esercizio03.querySelectorAll("input[type='text']")
-        );
-        const answers = fields.map((field) => field.value);
-
-        const normalizeAnswer = (answer) => {
-          return answer.trim().toLowerCase();
-        };
-
-        const checkAnswer = (answer, idx) => {
-          // if (answer === "" || answer === "Scrivi la tua risposta") {
-          //   fields[idx].value = "Scrivi la tua risposta";
-          //   return;
-          // }
-
-          const rawAnswer = normalizeAnswer(answer);
-
-          if (rawAnswer === solutions[idx]) {
-            fields[idx].style.border = "1px solid green";
-            // console.log("👍");
-          } else {
-            fields[idx].style.border = "1px solid red";
-            // console.log("👎");
-          }
-        };
-
-        answers.forEach((answer, idx) => checkAnswer(answer, idx));
-      });
-    </script>
   </body>
 </html>
