@@ -6,6 +6,8 @@
     <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
     <title>Prova 2 | Esercizio 4</title>
     <link rel="stylesheet" href="../styles/output.css" />
+    <script type="module" src="../scripts/main.js" defer></script>
+    <script src="../scripts/handleGapFilling.js" defer></script>
   </head>
 
   <body>
@@ -22,11 +24,12 @@
         </p>
       </header>
 
-      <form action="#" id="esercizio04" autocomplete="off">
+      <form action="#" id="es04" autocomplete="off">
         <div class="space-y-6">
           <section>
             <p class="py-1 leading-relaxed">
-              A. — Che cosa regali a tua mamma per Natale?
+              <span class="font-bold text-blue-700">A.</span>
+              — Che cosa regali a tua mamma per Natale?
             </p>
             <p class="py-1 leading-relaxed">
               —
@@ -42,7 +45,8 @@
           </section>
           <section>
             <p class="py-1 leading-relaxed">
-              B. Più tardi chiamo Giulio oppure
+              <span class="font-bold text-blue-700">B.</span>
+              Più tardi chiamo Giulio oppure
               <input
                 class="gap-pronoun"
                 aria-label="fill the gap"
@@ -55,7 +59,8 @@
           </section>
           <section>
             <p class="py-1 leading-relaxed">
-              C. Vorrei andare dal professore per chieder
+              <span class="font-bold text-blue-700">C.</span>
+              Vorrei andare dal professore per chieder
               <input
                 class="gap-pronoun"
                 aria-label="fill the gap"
@@ -67,7 +72,10 @@
             </p>
           </section>
           <section>
-            <p class="py-1 leading-relaxed">D. — Mi vuoi bene?</p>
+            <p class="py-1 leading-relaxed">
+              <span class="font-bold text-blue-700">D.</span>
+              — Mi vuoi bene?
+            </p>
             <p class="py-1 leading-relaxed">
               — Ma certo che
               <input
@@ -82,7 +90,8 @@
           </section>
           <section>
             <p class="py-1 leading-relaxed">
-              E. Non vedo i miei nipoti da un mese e
+              <span class="font-bold text-blue-700">E.</span>
+              Non vedo i miei nipoti da un mese e
               <input
                 class="gap-pronoun"
                 aria-label="fill the gap"
@@ -96,13 +105,14 @@
 
           <section>
             <p class="py-1 leading-relaxed">
-              F. Stasera andate al cinema?
+              <span class="font-bold text-blue-700">F.</span>
+              Stasera andate al cinema?
               <input
                 class="gap-pronoun"
                 aria-label="fill the gap"
                 type="text"
-                name="answer01"
-                id="answer01"
+                name="answer06"
+                id="answer06"
               />
               consiglio di guardare l'ultimo film di Céline Sciamma, è davvero
               fantastico.
@@ -131,42 +141,5 @@
         </ol>
       </nav>
     </div>
-    <script>
-      const solutions = ["le", "gli", "gli", "ti", "mi", "vi"];
-
-      const esercizio04 = document.getElementById("esercizio04");
-
-      esercizio04.addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        const fields = Array.from(
-          esercizio04.querySelectorAll("input[type='text']")
-        );
-        const answers = fields.map((field) => field.value);
-
-        const normalizeAnswer = (answer) => {
-          return answer.trim().toLowerCase();
-        };
-
-        const checkAnswer = (answer, idx) => {
-          // if (answer === "" || answer === "Scrivi la tua risposta") {
-          //   fields[idx].value = "Scrivi la tua risposta";
-          //   return;
-          // }
-
-          const rawAnswer = normalizeAnswer(answer);
-
-          if (rawAnswer === solutions[idx]) {
-            fields[idx].style.border = "1px solid green";
-            // console.log("👍");
-          } else {
-            fields[idx].style.border = "1px solid red";
-            // console.log("👎");
-          }
-        };
-
-        answers.forEach((answer, idx) => checkAnswer(answer, idx));
-      });
-    </script>
   </body>
 </html>

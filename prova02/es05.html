@@ -6,6 +6,8 @@
     <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
     <title>Prova 2 | Esercizio 5</title>
     <link rel="stylesheet" href="../styles/output.css" />
+    <script type="module" src="../scripts/main.js" defer></script>
+    <script src="../scripts/handleGapFilling.js" defer></script>
   </head>
 
   <body>
@@ -22,11 +24,12 @@
         </p>
       </header>
 
-      <form action="#" id="esercizio05" autocomplete="off">
+      <form action="#" id="es05" autocomplete="off">
         <div class="space-y-6">
           <section>
             <p class="py-1 leading-relaxed">
-              A. Questi libri sono di Giorgia, tra due giorni
+              <span class="font-bold text-blue-700">A.</span>
+              Questi libri sono di Giorgia, tra due giorni
               <input
                 class="gap-pronoun"
                 aria-label="fill the gap"
@@ -38,7 +41,10 @@
             </p>
           </section>
           <section>
-            <p class="py-1 leading-relaxed">B. — Mi fai un favore?</p>
+            <p class="py-1 leading-relaxed">
+              <span class="font-bold text-blue-700">B.</span>
+              — Mi fai un favore?
+            </p>
             <p class="py-1 leading-relaxed">
               — Certo,
               <input
@@ -53,7 +59,8 @@
           </section>
           <section>
             <p class="py-1 leading-relaxed">
-              C. — Buongiorno, vorrei un appuntamento.
+              <span class="font-bold text-blue-700">C.</span>
+              — Buongiorno, vorrei un appuntamento.
             </p>
             <p class="py-1 leading-relaxed">
               — Certo, signor Bianchi,
@@ -69,7 +76,8 @@
           </section>
           <section>
             <p class="py-1 leading-relaxed">
-              D. Se ti piacciono tanto quelle scare, compra
+              <span class="font-bold text-blue-700">D.</span>
+              Se ti piacciono tanto quelle scare, compra
               <input
                 class="gap-pronoun"
                 aria-label="fill the gap"
@@ -82,7 +90,8 @@
           </section>
           <section>
             <p class="py-1 leading-relaxed">
-              E. Devo mandare una mail al direttore, ma non ho tempo.
+              <span class="font-bold text-blue-700">E.</span>
+              Devo mandare una mail al direttore, ma non ho tempo.
               <input
                 class="gap-pronoun"
                 aria-label="fill the gap"
@@ -96,13 +105,14 @@
 
           <section>
             <p class="py-1 leading-relaxed">
-              F. Che bello il tuo vestito blu,
+              <span class="font-bold text-blue-700">F.</span>
+              Che bello il tuo vestito blu,
               <input
                 class="gap-pronoun"
                 aria-label="fill the gap"
                 type="text"
-                name="answer01"
-                id="answer01"
+                name="answer06"
+                id="answer06"
               />
               puoi prestare per la festa di domani?
             </p>
@@ -130,49 +140,5 @@
         </ol>
       </nav>
     </div>
-    <script>
-      const solutions = [
-        "glieli",
-        "te lo",
-        "glielo",
-        "tele",
-        "gliela",
-        "me lo",
-      ];
-
-      const esercizio05 = document.getElementById("esercizio05");
-
-      esercizio05.addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        const fields = Array.from(
-          esercizio05.querySelectorAll("input[type='text']")
-        );
-        const answers = fields.map((field) => field.value);
-
-        const normalizeAnswer = (answer) => {
-          return answer.trim().toLowerCase();
-        };
-
-        const checkAnswer = (answer, idx) => {
-          // if (answer === "" || answer === "Scrivi la tua risposta") {
-          //   fields[idx].value = "Scrivi la tua risposta";
-          //   return;
-          // }
-
-          const rawAnswer = normalizeAnswer(answer);
-
-          if (rawAnswer === solutions[idx]) {
-            fields[idx].style.border = "1px solid green";
-            // console.log("👍");
-          } else {
-            fields[idx].style.border = "1px solid red";
-            // console.log("👎");
-          }
-        };
-
-        answers.forEach((answer, idx) => checkAnswer(answer, idx));
-      });
-    </script>
   </body>
 </html>

@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
-    <title>Prova 1 | Esercizio 7</title>
+    <title>Prova 2 | Esercizio 7</title>
     <link rel="stylesheet" href="../styles/output.css" />
+    <script type="module" src="../scripts/main.js" defer></script>
+    <script src="../scripts/handleGapFilling.js" defer></script>
   </head>
 
   <body>
@@ -22,11 +24,12 @@
         </p>
       </header>
 
-      <form action="#" id="esercizio07" autocomplete="off">
+      <form action="#" id="es07" autocomplete="off">
         <div class="space-y-6">
           <section>
             <p class="py-1 leading-relaxed">
-              A. Domani non riesco a portare i bambini a scuola.
+              <span class="font-bold text-blue-700">A.</span>
+              Domani non riesco a portare i bambini a scuola.
               <input
                 class="gap-pronoun"
                 aria-label="fill the gap"
@@ -39,7 +42,8 @@
           </section>
           <section>
             <p class="py-1 leading-relaxed">
-              B. La prossima settimana mia figlia inizia la scuola elementare.
+              <span class="font-bold text-blue-700">B.</span>
+              La prossima settimana mia figlia inizia la scuola elementare.
               <input
                 class="gap-pronoun"
                 aria-label="fill the gap"
@@ -52,7 +56,8 @@
           </section>
           <section>
             <p class="py-1 leading-relaxed">
-              C. — Hai detto ai tuoi genitori di firmare il diario?
+              <span class="font-bold text-blue-700">C.</span>
+              — Hai detto ai tuoi genitori di firmare il diario?
             </p>
             <p class="py-1 leading-relaxed">
               — Sì,
@@ -68,7 +73,8 @@
           </section>
           <section>
             <p class="py-1 leading-relaxed">
-              D. — Mamma, mi compri questi due evidenziatori?
+              <span class="font-bold text-blue-700">D.</span>
+              — Mamma, mi compri questi due evidenziatori?
             </p>
             <p class="py-1 leading-relaxed">
               — No, te
@@ -84,8 +90,9 @@
           </section>
           <section>
             <p class="py-1 leading-relaxed">
-              E. — Per fare l’iscrizione dovete andare in segreteria, su al
-              primo piano.
+              <span class="font-bold text-blue-700">E.</span>
+              — Per fare l’iscrizione dovete andare in segreteria, su al primo
+              piano.
             </p>
             <p class="py-1 leading-relaxed">
               — Va bene,
@@ -102,13 +109,14 @@
 
           <section>
             <p class="py-1 leading-relaxed">
-              F. Cari mamma e papà,
+              <span class="font-bold text-blue-700">F.</span>
+              Cari mamma e papà,
               <input
                 class="gap-pronoun"
                 aria-label="fill the gap"
                 type="text"
-                name="answer01"
-                id="answer01"
+                name="answer06"
+                id="answer06"
               />
               voglio molto bene!
             </p>
@@ -116,7 +124,8 @@
 
           <section>
             <p class="py-1 leading-relaxed">
-              G. — Signora, quanto prosciutto cotto vuole?
+              <span class="font-bold text-blue-700">G.</span>
+              — Signora, quanto prosciutto cotto vuole?
             </p>
             <p class="py-1 leading-relaxed">
               —
@@ -124,8 +133,8 @@
                 class="gap-pronoun"
                 aria-label="fill the gap"
                 type="text"
-                name="answer03"
-                id="answer03"
+                name="answer07"
+                id="answer07"
               />
               prendo due etti, grazie.
             </p>
@@ -133,14 +142,15 @@
 
           <section>
             <p class="py-1 leading-relaxed">
-              H. Sono in ritardo! Mio marito non può andare a prendere i bambini
-              a scuola e devo andar
+              <span class="font-bold text-blue-700">H.</span>
+              Sono in ritardo! Mio marito non può andare a prendere i bambini a
+              scuola e devo andar
               <input
                 class="gap-pronoun"
                 aria-label="fill the gap"
                 type="text"
-                name="answer01"
-                id="answer01"
+                name="answer08"
+                id="answer08"
               />
               io!
             </p>
@@ -148,7 +158,8 @@
 
           <section>
             <p class="py-1 leading-relaxed">
-              I. — Secondo te, Romina vieni alla festa domani?
+              <span class="font-bold text-blue-700">I.</span>
+              — Secondo te, Romina vieni alla festa domani?
             </p>
             <p class="py-1 leading-relaxed">
               — Guarda, è lì, chiedi
@@ -156,8 +167,8 @@
                 class="gap-pronoun"
                 aria-label="fill the gap"
                 type="text"
-                name="answer03"
-                id="answer03"
+                name="answer09"
+                id="answer09"
               />
               .
             </p>
@@ -165,13 +176,14 @@
 
           <section>
             <p class="py-1 leading-relaxed">
-              L. Adoro quel film!
+              <span class="font-bold text-blue-700">L.</span>
+              Adoro quel film!
               <input
                 class="gap-pronoun"
                 aria-label="fill the gap"
                 type="text"
-                name="answer01"
-                id="answer01"
+                name="answer10"
+                id="answer10"
               />
               ho già visto tre volte!
             </p>
@@ -199,53 +211,5 @@
         </ol>
       </nav>
     </div>
-    <script>
-      const solutions = [
-        "li",
-        "le",
-        "gliel'",
-        "ne",
-        "ci",
-        "vi",
-        "ne",
-        "ci",
-        "glielo",
-        "l'",
-      ];
-
-      const esercizio07 = document.getElementById("esercizio07");
-
-      esercizio07.addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        const fields = Array.from(
-          esercizio07.querySelectorAll("input[type='text']")
-        );
-        const answers = fields.map((field) => field.value);
-
-        const normalizeAnswer = (answer) => {
-          return answer.trim().toLowerCase();
-        };
-
-        const checkAnswer = (answer, idx) => {
-          // if (answer === "" || answer === "Scrivi la tua risposta") {
-          //   fields[idx].value = "Scrivi la tua risposta";
-          //   return;
-          // }
-
-          const rawAnswer = normalizeAnswer(answer);
-
-          if (rawAnswer === solutions[idx]) {
-            fields[idx].style.border = "1px solid green";
-            // console.log("👍");
-          } else {
-            fields[idx].style.border = "1px solid red";
-            // console.log("👎");
-          }
-        };
-
-        answers.forEach((answer, idx) => checkAnswer(answer, idx));
-      });
-    </script>
   </body>
 </html>

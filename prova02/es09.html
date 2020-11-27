@@ -6,6 +6,8 @@
     <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
     <title>Prova 2 | Esercizio 9</title>
     <link rel="stylesheet" href="../styles/output.css" />
+    <script type="module" src="../scripts/main.js" defer></script>
+    <script src="../scripts/handleTrueOrFalse.js" defer></script>
   </head>
 
   <body>
@@ -37,16 +39,17 @@
         </audio>
       </figure>
 
-      <form action="" id="esercizio09" autocomplete="off">
+      <form action="" id="es09" autocomplete="off">
         <div class="space-y-4">
           <fieldset class="flex justify-between">
             <div>
               <legend class="flex-initial p-2">
-                A. libero ne è l’insegnamento.
+                <span class="font-bold text-blue-700">A.</span>
+                libero ne è l’insegnamento.
               </legend>
             </div>
 
-            <div class="flex-none p-2" data-risp="">
+            <div class="flex-none p-2">
               <label for="si">Sì</label>
               <input
                 class="w-6 h-6 form-radio"
@@ -69,10 +72,11 @@
           <fieldset class="flex justify-between">
             <div>
               <legend class="flex-initial p-2">
-                B. pulisce aiole statali.
+                <span class="font-bold text-blue-700">B.</span>
+                pulisce aiole statali.
               </legend>
             </div>
-            <div class="flex-none p-2" data-risp="">
+            <div class="flex-none p-2">
               <label for="si">Sì</label>
               <input
                 class="w-6 h-6 form-radio"
@@ -95,10 +99,11 @@
           <fieldset class="flex justify-between">
             <div>
               <legend class="flex-initial p-2">
-                C. senza poteri per lo Stato.
+                <span class="font-bold text-blue-700">C.</span>
+                senza poteri per lo Stato.
               </legend>
             </div>
-            <div class="flex-none p-2" data-risp="">
+            <div class="flex-none p-2">
               <label for="si">Sì</label>
               <input
                 class="w-6 h-6 form-radio"
@@ -121,10 +126,11 @@
           <fieldset class="flex justify-between">
             <div>
               <legend class="flex-initial p-2">
-                D. assicurazione di libertà.
+                <span class="font-bold text-blue-700">D.</span>
+                assicurazione di libertà.
               </legend>
             </div>
-            <div class="flex-none p-2" data-risp="">
+            <div class="flex-none p-2">
               <label for="si">Sì</label>
               <input
                 class="w-6 h-6 form-radio"
@@ -147,10 +153,11 @@
           <fieldset class="flex justify-between">
             <div>
               <legend class="flex-initial p-2">
-                E. vari ordini e gradi di scuole.
+                <span class="font-bold text-blue-700">E.</span>
+                vari ordini e gradi di scuole.
               </legend>
             </div>
-            <div class="flex-none p-2" data-risp="">
+            <div class="flex-none p-2">
               <label for="si">Sì</label>
               <input
                 class="w-6 h-6 form-radio"
@@ -173,10 +180,11 @@
           <fieldset class="flex justify-between">
             <div>
               <legend class="flex-initial p-2">
-                F. diritto di darsi ordinamenti.
+                <span class="font-bold text-blue-700">F.</span>
+                iritto di darsi ordinamenti.
               </legend>
             </div>
-            <div class="flex-none p-2" data-risp="">
+            <div class="flex-none p-2">
               <label for="si">Sì</label>
               <input
                 class="w-6 h-6 form-radio"
@@ -199,10 +207,11 @@
           <fieldset class="flex justify-between">
             <div>
               <legend class="flex-initial p-2">
-                G. impartita per almeno otto anni.
+                <span class="font-bold text-blue-700">G.</span>
+                impartita per almeno otto anni.
               </legend>
             </div>
-            <div class="flex-none p-2" data-risp="">
+            <div class="flex-none p-2">
               <label for="si">Sì</label>
               <input
                 class="w-6 h-6 form-radio"
@@ -225,10 +234,11 @@
           <fieldset class="flex justify-between">
             <div>
               <legend class="flex-initial p-2">
-                H. giungere ai piani più alti.
+                <span class="font-bold text-blue-700">H.</span>
+                giungere ai piani più alti.
               </legend>
             </div>
-            <div class="flex-none p-2" data-risp="">
+            <div class="flex-none p-2">
               <label for="si">Sì</label>
               <input
                 class="w-6 h-6 form-radio"
@@ -251,10 +261,11 @@
           <fieldset class="flex justify-between">
             <div>
               <legend class="flex-initial p-2">
-                I. devono essere attribuite in corso.
+                <span class="font-bold text-blue-700">I.</span>
+                devono essere attribuite in corso.
               </legend>
             </div>
-            <div class="flex-none p-2" data-risp="">
+            <div class="flex-none p-2">
               <label for="si">Sì</label>
               <input
                 class="w-6 h-6 form-radio"
@@ -276,9 +287,12 @@
 
           <fieldset class="flex justify-between">
             <div>
-              <legend class="flex-initial p-2">L. fuori del matrimonio.</legend>
+              <legend class="flex-initial p-2">
+                <span class="font-bold text-blue-700">L.</span>
+                fuori del matrimonio.
+              </legend>
             </div>
-            <div class="flex-none p-2" data-risp="">
+            <div class="flex-none p-2">
               <label for="si">Sì</label>
               <input
                 class="w-6 h-6 form-radio"
@@ -330,62 +344,5 @@
         </ol>
       </nav>
     </div>
-
-    <script>
-      const solutions = [
-        "true",
-        "false",
-        "false",
-        "false",
-        "true",
-        "true",
-        "true",
-        "false",
-        "false",
-        "true",
-      ];
-
-      const esercizio09 = document.getElementById("esercizio09");
-
-      esercizio09.addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        const fields = Array.from(
-          esercizio09.querySelectorAll("input[type='radio']")
-        );
-
-        // if field.checked pass value to the parent
-        fields.forEach((field, idx) => {
-          field.checked ? (field.parentNode.dataset.risp = field.value) : "";
-        });
-
-        const attrs = Array.from(
-          esercizio09.querySelectorAll("div[data-risp]")
-        );
-
-        const answers = attrs.map((item) => item.dataset.risp);
-
-        const checkAnswer = (answer, idx) => {
-          if (answer == solutions[idx].toString()) {
-            // console.log("👍", answer, solutions[idx]);
-            return true;
-          } else {
-            // console.log("👎", answer, solutions[idx]);
-            return false;
-          }
-        };
-
-        attrs
-          .map((item) => item.dataset.risp)
-          .forEach((answer, idx) => {
-            attrs[idx].parentNode.classList.remove("right");
-            attrs[idx].parentNode.classList.remove("error");
-
-            checkAnswer(answer, idx)
-              ? attrs[idx].parentNode.classList.add("right")
-              : attrs[idx].parentNode.classList.add("error");
-          });
-      });
-    </script>
   </body>
 </html>

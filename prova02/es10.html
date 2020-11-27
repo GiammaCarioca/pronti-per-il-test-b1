@@ -6,6 +6,8 @@
     <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
     <title>Prova 2 | Esercizio 10</title>
     <link rel="stylesheet" href="../styles/output.css" />
+    <script type="module" src="../scripts/main.js" defer></script>
+    <script src="../scripts/handleTrueOrFalse.js" defer></script>
   </head>
 
   <body>
@@ -37,17 +39,18 @@
         </audio>
       </figure>
 
-      <form action="" id="esercizio10" autocomplete="off">
+      <form action="" id="es10" autocomplete="off">
         <div class="space-y-4">
           <fieldset class="flex justify-between">
             <div>
               <legend class="flex-initial p-2">
-                A. Il programma radiofonico spiega come difendersi dal bullismo
-                e dal cyberbullismo.
+                <span class="font-bold text-blue-700">A.</span>
+                Il programma radiofonico spiega come difendersi dal bullismo e
+                dal cyberbullismo.
               </legend>
             </div>
 
-            <div class="flex-none p-2" data-risp="">
+            <div class="flex-none p-2">
               <label for="si">Sì</label>
               <input
                 class="w-6 h-6 form-radio"
@@ -70,12 +73,13 @@
           <fieldset class="flex justify-between">
             <div>
               <legend class="flex-initial p-2">
-                B. Per iscriversi al progetto
+                <span class="font-bold text-blue-700">B.</span>
+                Per iscriversi al progetto
                 <span class="italic">Stop ai bulli</span> bisogna andare sul
                 sito.
               </legend>
             </div>
-            <div class="flex-none p-2" data-risp="">
+            <div class="flex-none p-2">
               <label for="si">Sì</label>
               <input
                 class="w-6 h-6 form-radio"
@@ -98,10 +102,11 @@
           <fieldset class="flex justify-between">
             <div>
               <legend class="flex-initial p-2">
-                C. Da quest’anno possono partecipare anche le scuole primarie.
+                <span class="font-bold text-blue-700">C.</span>
+                Da quest’anno possono partecipare anche le scuole primarie.
               </legend>
             </div>
-            <div class="flex-none p-2" data-risp="">
+            <div class="flex-none p-2">
               <label for="si">Sì</label>
               <input
                 class="w-6 h-6 form-radio"
@@ -124,10 +129,11 @@
           <fieldset class="flex justify-between">
             <div>
               <legend class="flex-initial p-2">
-                D. Il progetto è rivolto solo agli studenti e agli insegnanti.
+                <span class="font-bold text-blue-700">D.</span>
+                Il progetto è rivolto solo agli studenti e agli insegnanti.
               </legend>
             </div>
-            <div class="flex-none p-2" data-risp="">
+            <div class="flex-none p-2">
               <label for="si">Sì</label>
               <input
                 class="w-6 h-6 form-radio"
@@ -150,11 +156,12 @@
           <fieldset class="flex justify-between">
             <div>
               <legend class="flex-initial p-2">
-                E. Secondo il progetto è importante la collaborazione tra
-                docenti, studenti e genitori.
+                <span class="font-bold text-blue-700">E.</span>
+                Secondo il progetto è importante la collaborazione tra docenti,
+                studenti e genitori.
               </legend>
             </div>
-            <div class="flex-none p-2" data-risp="">
+            <div class="flex-none p-2">
               <label for="si">Sì</label>
               <input
                 class="w-6 h-6 form-radio"
@@ -177,11 +184,12 @@
           <fieldset class="flex justify-between">
             <div>
               <legend class="flex-initial p-2">
-                F. Gli psicologi spiegheranno come usare le nuove tecnologie in
+                <span class="font-bold text-blue-700">F.</span>
+                Gli psicologi spiegheranno come usare le nuove tecnologie in
                 classe.
               </legend>
             </div>
-            <div class="flex-none p-2" data-risp="">
+            <div class="flex-none p-2">
               <label for="si">Sì</label>
               <input
                 class="w-6 h-6 form-radio"
@@ -204,10 +212,11 @@
           <fieldset class="flex justify-between">
             <div>
               <legend class="flex-initial p-2">
-                G. Al progetto parteciperanno anche persone famose.
+                <span class="font-bold text-blue-700">G.</span>
+                Al progetto parteciperanno anche persone famose.
               </legend>
             </div>
-            <div class="flex-none p-2" data-risp="">
+            <div class="flex-none p-2">
               <label for="si">Sì</label>
               <input
                 class="w-6 h-6 form-radio"
@@ -230,11 +239,12 @@
           <fieldset class="flex justify-between">
             <div>
               <legend class="flex-initial p-2">
-                H. Secondo il giornalista, questo progetto sarà molto utile a
+                <span class="font-bold text-blue-700">H.</span>
+                Secondo il giornalista, questo progetto sarà molto utile a
                 combattere il bullismo nelle scuole.
               </legend>
             </div>
-            <div class="flex-none p-2" data-risp="">
+            <div class="flex-none p-2">
               <label for="si">Sì</label>
               <input
                 class="w-6 h-6 form-radio"
@@ -279,59 +289,5 @@
         </ol>
       </nav>
     </div>
-
-    <script>
-      const solutions = [
-        "false",
-        "true",
-        "true",
-        "false",
-        "true",
-        "false",
-        "true",
-        "true",
-      ];
-      const esercizio10 = document.getElementById("esercizio10");
-
-      esercizio10.addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        const fields = Array.from(
-          esercizio10.querySelectorAll("input[type='radio']")
-        );
-
-        // if field.checked pass value to the parent
-        fields.forEach((field, idx) => {
-          field.checked ? (field.parentNode.dataset.risp = field.value) : "";
-        });
-
-        const attrs = Array.from(
-          esercizio10.querySelectorAll("div[data-risp]")
-        );
-
-        const answers = attrs.map((item) => item.dataset.risp);
-
-        const checkAnswer = (answer, idx) => {
-          if (answer == solutions[idx].toString()) {
-            // console.log("👍", answer, solutions[idx]);
-            return true;
-          } else {
-            // console.log("👎", answer, solutions[idx]);
-            return false;
-          }
-        };
-
-        attrs
-          .map((item) => item.dataset.risp)
-          .forEach((answer, idx) => {
-            attrs[idx].parentNode.classList.remove("right");
-            attrs[idx].parentNode.classList.remove("error");
-
-            checkAnswer(answer, idx)
-              ? attrs[idx].parentNode.classList.add("right")
-              : attrs[idx].parentNode.classList.add("error");
-          });
-      });
-    </script>
   </body>
 </html>

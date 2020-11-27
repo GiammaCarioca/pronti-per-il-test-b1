@@ -6,6 +6,8 @@
     <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
     <title>Prova 2 | Esercizio 6</title>
     <link rel="stylesheet" href="../styles/output.css" />
+    <script type="module" src="../scripts/main.js" defer></script>
+    <script src="../scripts/handleCloze.js" defer></script>
   </head>
 
   <body>
@@ -22,7 +24,7 @@
         </p>
       </header>
 
-      <form action="#" id="esercizio06" autocomplete="off">
+      <form action="#" id="es06" autocomplete="off">
         <article>
           <div class="flex justify-center mb-6 -mt-10">
             <h2
@@ -196,37 +198,5 @@
         </ol>
       </nav>
     </div>
-    <script>
-      const solutions = ["c", "b", "a", "c", "a", "c", "a", "b", "b", "a"];
-
-      const esercizio06 = document.getElementById("esercizio06");
-
-      esercizio06.addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        const fields = Array.from(esercizio06.querySelectorAll("select"));
-        const answers = fields.map((field) => field.value);
-
-        const normalizeAnswer = (answer) => {
-          return answer.trim().toLowerCase();
-        };
-
-        const checkAnswer = (answer, idx) => {
-          if (answer === "" || answer === "") return;
-
-          const rawAnswer = normalizeAnswer(answer);
-
-          if (rawAnswer === solutions[idx]) {
-            fields[idx].style.border = "1px solid green";
-            console.log("👍");
-          } else {
-            fields[idx].style.border = "1px solid red";
-            console.log("👎");
-          }
-        };
-
-        answers.forEach((answer, idx) => checkAnswer(answer, idx));
-      });
-    </script>
   </body>
 </html>
