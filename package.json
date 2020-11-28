@@ -2,24 +2,29 @@
   "name": "pronti-per-il-test-b1",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
+  "main": "src/index.html",
   "scripts": {
-    "serve": "browser-sync start --server --files 'styles/*.css, **/*.html'",
-    "watch": "postcss styles/tailwind.css -o styles/output.css --watch",
-    "start": "npm run serve && npm run watch",
-    "build": "postcss styles/tailwind.css -o styles/output.css"
+    "tailwind:watch": "postcss src/styles/tailwind.css -o src/styles/output.css --watch",
+    "parcel:start": "parcel src/index.html -p 3000 --open",
+    "clean": "rm -rf dist/* .cache",
+    "parcel:build": "parcel build src/index.html",
+    "tailwind:build": "postcss src/styles/tailwind.css -o src/styles/output.css",
+    "start": "npm run parcel:start && npm run tailwind:watch",
+    "build": "npm run tailwind:build && npm run clean && npm run parcel:build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^2.3.0",
+    "@tailwindcss/forms": "^0.2.1",
     "autoprefixer": "^9.8.6",
     "postcss-cli": "^8.2.0",
     "tailwindcss": "^1.9.6"
   },
   "devDependencies": {
-    "@tailwindcss/custom-forms": "^0.2.1",
-    "browser-sync": "^2.26.13"
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "parcel-bundler": "^1.12.4"
   }
 }

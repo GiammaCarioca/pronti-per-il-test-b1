@@ -5,7 +5,7 @@ module.exports = {
     // removeDeprecatedGapUtilities: true,
     // purgeLayersByDefault: true,
   },
-  purge: [],
+  purge: ["./src/**/*.html", "./src/**/*.css"],
   theme: {
     extend: {
       fontFamily: {
@@ -15,7 +15,7 @@ module.exports = {
   },
   variants: { backgroundColor: ["checked"] },
   plugins: [
-    require("@tailwindcss/custom-forms"),
+    require("@tailwindcss/forms"),
     function ({ e, addUtilities }) {
       const newUtilities = {
         ".custom": {
