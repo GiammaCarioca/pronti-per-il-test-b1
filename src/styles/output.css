@@ -855,6 +855,22 @@ input[type="radio"] {
   color: rgba(99, 179, 237, var(--text-opacity));
 }
 
+input.invisible[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label.prep {
+  cursor: pointer;
+  border: 1px solid transparent;
+  background-color: rgba(197, 230, 244, 1);
+}
+
+input[type="radio"]:checked + label.prep {
+  background-color: #0099cc;
+  color: whitesmoke;
+  transition: 0.3s ease-out;
+}
+
 input[type="text"].gap-pronoun {
   width: 4rem;
   height: 2rem;
@@ -896,6 +912,36 @@ fieldset.right {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
+input[type="radio"]:checked + label.prep.right {
+  line-height: 1.5;
+  --text-opacity: 1;
+  color: #f7fafc;
+  color: rgba(247, 250, 252, var(--text-opacity));
+  --bg-opacity: 1;
+  background-color: #48bb78;
+  background-color: rgba(72, 187, 120, var(--bg-opacity));
+  border-radius: 0;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+input[type="radio"]:not(:checked) + label.prep.right {
+  line-height: 1.5;
+  --text-opacity: 1;
+  color: #2d3748;
+  color: rgba(45, 55, 72, var(--text-opacity));
+  border-radius: 0;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+input[type="radio"]:not(:checked) + label.prep.error {
+  line-height: 1.5;
+  --text-opacity: 1;
+  color: #2d3748;
+  color: rgba(45, 55, 72, var(--text-opacity));
+  border-radius: 0;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
 label.right span,
 div.right span,
 fieldset.right span {
@@ -915,6 +961,18 @@ fieldset.error {
   background-color: #f56565;
   background-color: rgba(245, 101, 101, var(--bg-opacity));
   border-radius: 0.25rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+input[type="radio"]:checked + label.prep.error {
+  line-height: 1.5;
+  --text-opacity: 1;
+  color: #f7fafc;
+  color: rgba(247, 250, 252, var(--text-opacity));
+  --bg-opacity: 1;
+  background-color: #f56565;
+  background-color: rgba(245, 101, 101, var(--bg-opacity));
+  border-radius: 0;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 

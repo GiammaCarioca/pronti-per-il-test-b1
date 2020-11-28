@@ -28,6 +28,22 @@ input[type="radio"] {
   @apply w-6 h-6 text-blue-400;
 }
 
+input.invisible[type="radio"] {
+  @apply hidden;
+}
+
+input[type="radio"] + label.prep {
+  cursor: pointer;
+  border: 1px solid transparent;
+  background-color: rgba(197, 230, 244, 1);
+}
+
+input[type="radio"]:checked + label.prep {
+  background-color: #0099cc;
+  color: whitesmoke;
+  transition: 0.3s ease-out;
+}
+
 input[type="text"].gap-pronoun {
   @apply w-16 h-8 mt-1 text-center;
 }
@@ -50,6 +66,18 @@ fieldset.right {
   @apply leading-normal text-gray-100 bg-green-500 rounded shadow-lg;
 }
 
+input[type="radio"]:checked + label.prep.right {
+  @apply leading-normal text-gray-100 bg-green-500 rounded-none shadow-lg;
+}
+
+input[type="radio"]:not(:checked) + label.prep.right {
+  @apply leading-normal text-gray-800 rounded-none shadow-lg;
+}
+
+input[type="radio"]:not(:checked) + label.prep.error {
+  @apply leading-normal text-gray-800 rounded-none shadow-lg;
+}
+
 label.right span,
 div.right span,
 fieldset.right span {
@@ -60,6 +88,10 @@ label.error,
 div.error,
 fieldset.error {
   @apply leading-normal text-gray-100 bg-red-500 rounded shadow-lg;
+}
+
+input[type="radio"]:checked + label.prep.error {
+  @apply leading-normal text-gray-100 bg-red-500 rounded-none shadow-lg;
 }
 
 label.error span,

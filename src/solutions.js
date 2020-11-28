@@ -295,6 +295,21 @@ const allSolutions = {
       answer08: "false",
     },
   },
+  prova05: {
+    es03: {
+      answer01: "al",
+      answer02: "negli",
+      answer03: "in",
+      answer04: "della",
+      answer05: "a",
+      answer06: "della",
+      answer07: "in",
+      answer08: "in",
+      answer09: "dal",
+      answer10: "tra i",
+      answer11: "da",
+    },
+  },
 };
 
 export default allSolutions;
