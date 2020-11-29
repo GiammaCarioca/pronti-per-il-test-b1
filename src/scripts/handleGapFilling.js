@@ -14,11 +14,11 @@ const checkAnswers = (answers, solutions) => {
 
   textFields?.forEach((field) => {
     field.classList.remove("right");
-    field.classList.remove("error");
+    field.classList.remove("wrong");
 
     answers[field.name] === solutions[field.name]
       ? field.classList.add("right")
-      : field.classList.add("error");
+      : field.classList.add("wrong");
   });
 };
 

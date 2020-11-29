@@ -5,7 +5,7 @@ module.exports = {
     // removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  purge: ["./src/**/*.html", "./src/**/*.css"],
+  purge: ["./src/index.html", "./src/**/*.html", "./src/styles/*.css"],
   theme: {
     extend: {
       fontFamily: {

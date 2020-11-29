@@ -19,11 +19,11 @@ const checkAnswers = (answers, solutions) => {
     const currentSelect = option.parentNode;
 
     currentSelect.classList.remove("right");
-    currentSelect.classList.remove("error");
+    currentSelect.classList.remove("wrong");
 
     answers[currentSelect.name] === solutions[currentSelect.name]
       ? currentSelect.classList.add("right")
-      : currentSelect.classList.add("error");
+      : currentSelect.classList.add("wrong");
   });
 };
 

@@ -11,12 +11,12 @@ const checkAnswers = (answers, solutions) => {
   checkedFields?.forEach((field) => {
     field.parentNode.parentNode.querySelectorAll("label").forEach((label) => {
       label.classList.remove("right");
-      label.classList.remove("error");
+      label.classList.remove("wrong");
     });
 
     answers[field.name] === solutions[field.name]
       ? field.parentNode.classList.add("right")
-      : field.parentNode.classList.add("error");
+      : field.parentNode.classList.add("wrong");
   });
 };
 

@@ -10,11 +10,11 @@ const checkAnswers = (answers, solutions) => {
 
   checkedFields?.forEach((field) => {
     field.parentNode.querySelector("label").classList.remove("right");
-    field.parentNode.querySelector("label").classList.remove("error");
+    field.parentNode.querySelector("label").classList.remove("wrong");
 
     answers[field.name] === solutions[field.name]
       ? field.parentNode.querySelector("label").classList.add("right")
-      : field.parentNode.querySelector("label").classList.add("error");
+      : field.parentNode.querySelector("label").classList.add("wrong");
   });
 };
 

@@ -888,9 +888,9 @@ option.right {
   border-style: solid;
 }
 
-input.error[type="text"],
-select.error,
-option.error {
+input.wrong[type="text"],
+select.wrong,
+option.wrong {
   border-width: 1px;
   --border-opacity: 1;
   border-color: #f56565;
@@ -924,16 +924,8 @@ input[type="radio"]:checked + label.prep.right {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-input[type="radio"]:not(:checked) + label.prep.right {
-  line-height: 1.5;
-  --text-opacity: 1;
-  color: #2d3748;
-  color: rgba(45, 55, 72, var(--text-opacity));
-  border-radius: 0;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
-input[type="radio"]:not(:checked) + label.prep.error {
+input[type="radio"]:not(:checked) + label.prep.right,
+input[type="radio"]:not(:checked) + label.prep.wrong {
   line-height: 1.5;
   --text-opacity: 1;
   color: #2d3748;
@@ -950,9 +942,9 @@ fieldset.right span {
   color: rgba(247, 250, 252, var(--text-opacity));
 }
 
-label.error,
-div.error,
-fieldset.error {
+label.wrong,
+div.wrong,
+fieldset.wrong {
   line-height: 1.5;
   --text-opacity: 1;
   color: #f7fafc;
@@ -964,7 +956,7 @@ fieldset.error {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-input[type="radio"]:checked + label.prep.error {
+input[type="radio"]:checked + label.prep.wrong {
   line-height: 1.5;
   --text-opacity: 1;
   color: #f7fafc;
@@ -976,9 +968,9 @@ input[type="radio"]:checked + label.prep.error {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-label.error span,
-div.error span,
-fieldset.error span {
+label.wrong span,
+div.wrong span,
+fieldset.wrong span {
   --text-opacity: 1;
   color: #f7fafc;
   color: rgba(247, 250, 252, var(--text-opacity));

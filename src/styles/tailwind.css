@@ -5,27 +5,38 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  @apply text-gray-800 bg-gray-100;
+  @apply text-gray-800;
+  @apply bg-gray-100;
 }
 
 .wrapper {
-  @apply p-6 mx-auto;
+  @apply p-6;
+  @apply mx-auto;
 }
 
 .instructions {
-  @apply text-xl font-bold;
+  @apply text-xl;
+  @apply font-bold;
 }
 
 article {
-  @apply p-4 mt-12 mb-6 border-2 border-blue-700 border-dashed;
+  @apply p-4;
+  @apply mt-12;
+  @apply mb-6;
+  @apply border-2;
+  @apply border-blue-700;
+  @apply border-dashed;
 }
 
 input[type="text"] {
-  @apply w-40 mt-1;
+  @apply w-40;
+  @apply mt-1;
 }
 
 input[type="radio"] {
-  @apply w-6 h-6 text-blue-400;
+  @apply w-6;
+  @apply h-6;
+  @apply text-blue-400;
 }
 
 input.invisible[type="radio"] {
@@ -45,37 +56,52 @@ input[type="radio"]:checked + label.prep {
 }
 
 input[type="text"].gap-pronoun {
-  @apply w-16 h-8 mt-1 text-center;
+  @apply w-16;
+  @apply h-8;
+  @apply mt-1;
+  @apply text-center;
 }
 
 input.right[type="text"],
 select.right,
 option.right {
-  @apply border border-green-500 border-solid;
+  @apply border;
+  @apply border-green-500;
+  @apply border-solid;
 }
 
-input.error[type="text"],
-select.error,
-option.error {
-  @apply border border-red-500 border-solid;
+input.wrong[type="text"],
+select.wrong,
+option.wrong {
+  @apply border;
+  @apply border-red-500;
+  @apply border-solid;
 }
 
 label.right,
 div.right,
 fieldset.right {
-  @apply leading-normal text-gray-100 bg-green-500 rounded shadow-lg;
+  @apply leading-normal;
+  @apply text-gray-100;
+  @apply bg-green-500;
+  @apply rounded;
+  @apply shadow-lg;
 }
 
 input[type="radio"]:checked + label.prep.right {
-  @apply leading-normal text-gray-100 bg-green-500 rounded-none shadow-lg;
+  @apply leading-normal;
+  @apply text-gray-100;
+  @apply bg-green-500;
+  @apply rounded-none;
+  @apply shadow-lg;
 }
 
-input[type="radio"]:not(:checked) + label.prep.right {
-  @apply leading-normal text-gray-800 rounded-none shadow-lg;
-}
-
-input[type="radio"]:not(:checked) + label.prep.error {
-  @apply leading-normal text-gray-800 rounded-none shadow-lg;
+input[type="radio"]:not(:checked) + label.prep.right,
+input[type="radio"]:not(:checked) + label.prep.wrong {
+  @apply leading-normal;
+  @apply text-gray-800;
+  @apply rounded-none;
+  @apply shadow-lg;
 }
 
 label.right span,
@@ -84,48 +110,74 @@ fieldset.right span {
   @apply text-gray-100;
 }
 
-label.error,
-div.error,
-fieldset.error {
-  @apply leading-normal text-gray-100 bg-red-500 rounded shadow-lg;
+label.wrong,
+div.wrong,
+fieldset.wrong {
+  @apply leading-normal;
+  @apply text-gray-100;
+  @apply bg-red-500;
+  @apply rounded;
+  @apply shadow-lg;
 }
 
-input[type="radio"]:checked + label.prep.error {
-  @apply leading-normal text-gray-100 bg-red-500 rounded-none shadow-lg;
+input[type="radio"]:checked + label.prep.wrong {
+  @apply leading-normal;
+  @apply text-gray-100;
+  @apply bg-red-500;
+  @apply rounded-none;
+  @apply shadow-lg;
 }
 
-label.error span,
-div.error span,
-fieldset.error span {
+label.wrong span,
+div.wrong span,
+fieldset.wrong span {
   @apply text-gray-100;
 }
 
 .btn {
-  @apply px-4 py-2 my-8 font-bold text-blue-700 bg-transparent border-2 border-blue-700 border-solid rounded shadow-lg;
+  @apply px-4;
+  @apply py-2;
+  @apply my-8;
+  @apply font-bold;
+  @apply text-blue-700;
+  @apply bg-transparent;
+  @apply border-2;
+  @apply border-blue-700;
+  @apply border-solid;
+  @apply rounded;
+  @apply shadow-lg;
 }
 
 .btn:hover {
-  @apply text-blue-100 bg-blue-700;
+  @apply text-blue-100;
+  @apply bg-blue-700;
 }
 
 .btn:focus {
-  @apply shadow-outline outline-none;
+  @apply shadow-outline;
+  @apply outline-none;
 }
 
 .btn:active {
-  @apply text-blue-100 bg-blue-800;
+  @apply text-blue-100;
+  @apply bg-blue-800;
 }
 
 .disabled {
-  @apply text-gray-300 border-gray-300;
+  @apply text-gray-300;
+  @apply border-gray-300;
 }
 
 .disabled:hover {
-  @apply text-gray-300 bg-transparent cursor-not-allowed;
+  @apply text-gray-300;
+  @apply bg-transparent;
+  @apply cursor-not-allowed;
 }
 
 .nav-link {
-  @apply px-4 py-2 text-blue-700;
+  @apply px-4;
+  @apply py-2;
+  @apply text-blue-700;
 }
 
 /* @screen lg {
