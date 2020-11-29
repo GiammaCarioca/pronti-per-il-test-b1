@@ -1,4 +1,4 @@
-import { solutions, esercizio, service } from "./main.js";
+import { solutions, esercizio, service } from "../index.js";
 
 const answers = {};
 

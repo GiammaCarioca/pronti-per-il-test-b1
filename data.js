@@ -1,4 +1,4 @@
-const allSolutions = {
+export default {
   prova01: {
     es01: { answer01: "c" },
     es02: {
@@ -311,5 +311,3 @@ const allSolutions = {
     },
   },
 };
-
-export default allSolutions;

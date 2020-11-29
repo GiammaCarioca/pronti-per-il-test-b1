@@ -2,7 +2,7 @@ const plugin = require("tailwindcss/plugin");
 
 module.exports = {
   future: {
-    // removeDeprecatedGapUtilities: true,
+    removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
   purge: ["./src/index.html", "./src/**/*.html", "./src/styles/*.css"],
