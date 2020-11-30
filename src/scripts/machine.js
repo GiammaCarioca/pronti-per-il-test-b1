@@ -1,4 +1,4 @@
-const { Machine } = XState; // global variable: window.XState
+import { Machine } from "xstate";
 
 const machine = Machine({
   // Initial state

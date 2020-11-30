@@ -1,4 +1,4 @@
-const { interpret } = XState; // global variable: window.XState
+import { interpret } from "xstate";
 
 import machine from "./machine.js";
 

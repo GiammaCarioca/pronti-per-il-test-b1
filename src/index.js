@@ -1,16 +1,30 @@
 import allSolutions from "../data.js";
 import service from "./scripts/service.js";
 
-const pathArray = window.location.pathname.split("/");
-const filePath = pathArray[pathArray.length - 1].substring(0, 4);
-const directoryPath = pathArray[pathArray.length - 2];
+const path = window.location.pathname;
 
-// console.log(filePath);
-// console.log(directoryPath);
+function getDirectoryPathFromURL(path) {
+  if (!path) return;
 
-const solutions = allSolutions[`${directoryPath}`][filePath];
+  const pathArray = path.split("/");
+  const directoryPath = pathArray[pathArray.length - 2];
 
-const form = `${filePath}`;
+  return directoryPath;
+}
+
+function getFilePathFromURL(path) {
+  if (!path) return;
+
+  const pathArray = path.split("/");
+  const filePath = pathArray[pathArray.length - 1].substring(0, 4);
+
+  return filePath;
+}
+
+const solutions =
+  allSolutions[getDirectoryPathFromURL(path)][getFilePathFromURL(path)];
+
+const form = getFilePathFromURL(path);
 const esercizio = document.getElementById(form);
 
 export { solutions, esercizio, service };
