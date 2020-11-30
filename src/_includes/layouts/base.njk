@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {{ renderData.title or title or metadata.title}}
+    </title>
+    <meta
+      name="Description"
+      content="" />
+  </head>
+
+  <body>
+    <header>
+      <h1>{{ metadata.title }}</h1>
+    </header>
+    <main>
+      {{ content | safe }}
+    </main>
+  </body>
+</html>
