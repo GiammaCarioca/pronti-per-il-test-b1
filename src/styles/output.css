@@ -10651,10 +10651,8 @@ fieldset.wrong span {
   border: 1px solid red;
 } */
 
-@media (min-width: 640px){
-}
-
 @media (min-width: 768px){
+
   .md\:text-2xl{
     font-size: 1.5rem;
   }
@@ -10669,10 +10667,8 @@ fieldset.wrong span {
 }
 
 @media (min-width: 1024px){
+
   .lg\:w-2\/3{
     width: 66.666667%;
   }
-}
-
-@media (min-width: 1280px){
 }
