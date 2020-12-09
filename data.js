@@ -217,7 +217,7 @@ export default {
       answer01: 'marco la prepara',
       answer02: 'elena le scrive',
       answer03: 'mio figlio ne ha mangiati quattro',
-      answer04: 'digli che gli saluto',
+      answer04: 'digli che li saluto',
       answer05: 'comprane due chili',
       answer06: 'li hai visti?',
       answer07: 'voglio regalargli una bambola',
