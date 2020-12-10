@@ -629,7 +629,7 @@ export default {
     },
     es06: {
       answer01: 'c',
-      answer02: 'c',
+      answer02: 'a',
       answer03: 'b',
       answer04: 'a',
       answer05: 'c',
