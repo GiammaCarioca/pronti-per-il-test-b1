@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url('https://fonts.googleapis.com/css?family=Poppins');
 
 @tailwind base;
 @tailwind components;
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   @apply text-gray-800;
   @apply bg-gray-100;
 }
@@ -28,41 +28,54 @@ article {
   @apply border-dashed;
 }
 
-input[type="text"] {
-  @apply w-40;
-  @apply mt-1;
+input[type='text'] {
+  @apply bg-blue-100;
 }
 
-input[type="radio"] {
+input[type='radio'] {
   @apply w-6;
   @apply h-6;
   @apply text-blue-400;
 }
 
-input.invisible[type="radio"] {
+input.invisible[type='radio'] {
   @apply hidden;
 }
 
-input[type="radio"] + label.prep {
+input[type='radio'] + label.prep {
   cursor: pointer;
   border: 1px solid transparent;
   background-color: rgba(197, 230, 244, 1);
 }
 
-input[type="radio"]:checked + label.prep {
+input[type='radio']:checked + label.prep {
   background-color: #0099cc;
   color: whitesmoke;
   transition: 0.3s ease-out;
 }
 
-input[type="text"].gap-pronoun {
+input[type='text'].gap-sm {
   @apply w-16;
   @apply h-8;
   @apply mt-1;
   @apply text-center;
 }
 
-input.right[type="text"],
+input[type='text'].gap-md {
+  @apply w-24;
+  @apply h-8;
+  @apply mt-1;
+  @apply text-center;
+}
+
+input[type='text'].gap-lg {
+  @apply w-40;
+  @apply h-8;
+  @apply mt-1;
+  @apply text-center;
+}
+
+input.right[type='text'],
 select.right,
 option.right {
   @apply border;
@@ -70,7 +83,7 @@ option.right {
   @apply border-solid;
 }
 
-input.wrong[type="text"],
+input.wrong[type='text'],
 select.wrong,
 option.wrong {
   @apply border;
@@ -88,7 +101,7 @@ fieldset.right {
   @apply shadow-lg;
 }
 
-input[type="radio"]:checked + label.prep.right {
+input[type='radio']:checked + label.prep.right {
   @apply leading-normal;
   @apply text-gray-100;
   @apply bg-green-500;
@@ -96,8 +109,8 @@ input[type="radio"]:checked + label.prep.right {
   @apply shadow-lg;
 }
 
-input[type="radio"]:not(:checked) + label.prep.right,
-input[type="radio"]:not(:checked) + label.prep.wrong {
+input[type='radio']:not(:checked) + label.prep.right,
+input[type='radio']:not(:checked) + label.prep.wrong {
   @apply leading-normal;
   @apply text-gray-800;
   @apply rounded-none;
@@ -120,7 +133,7 @@ fieldset.wrong {
   @apply shadow-lg;
 }
 
-input[type="radio"]:checked + label.prep.wrong {
+input[type='radio']:checked + label.prep.wrong {
   @apply leading-normal;
   @apply text-gray-100;
   @apply bg-red-500;
@@ -187,7 +200,3 @@ fieldset.wrong span {
 } */
 
 @tailwind utilities;
-
-/* * {
-  border: 1px solid red;
-} */
